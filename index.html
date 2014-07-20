@@ -1,1 +1,207 @@
-hi there
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<meta charset="utf-8" />
+<title>Campus Steps</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href='//www.campusexplorer.com/css/combine/css/fonts/avenirnext/avenirnext.css,/css/fonts/museoslab1000/museoslab1000.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="/assets/css/clearsteps.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/peter.css" />
+<link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bs-sticky-footer.css" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	$(".guest_prohibited").click(function (e) {
+		e.preventDefault;
+		return false;
+	});
+
+	$(function() {
+      $("#id_school").autocomplete({
+        source: function(request, response){
+             $.getJSON("/schools/search/",
+                {
+                    term: request.term,
+                    state: $('#id_state').val(),
+                },
+                response );
+            },
+        minLength: 2,
+        create: function(event, ui) {
+          $(".ui-autocomplete").wrap("<div style=\"z-index:1000;\" class=\"jquery-ui-smoothness\"></div>");
+        },
+        select: function( event, ui ) {
+            $( "#id_school_id" ).val( ui.item.id );
+        }
+      });
+    });
+});
+</script>
+  
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/modernizr.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="homepage responsive">
+
+<!-- Thin Campus Steps/Explorer Jobs nav -->
+<div id="learning-header" class="group">
+	<div class="container">
+		<ul class="nav nav-pills pull-right">
+   			<li><a href="#">Campus Steps</a></li>
+  			<li><a href="#">Campus Explorer</a></li>
+			<li class="active"><a href="#">Job Steps</a></li>
+   		</ul>
+	</div>
+</div>
+
+<!-- Main Nav -->
+<nav class="navbar design-color" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="cs-brand" href="/">
+		<img src="/assets/img/design-logo.png" alt="Campus Steps">
+	  </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+        <ul class="subjects nav nav-pills pull-left">
+	        <li class="dropdown">
+	            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Graphic Design <b class="caret"></b></a>
+	            <ul class="dropdown-menu">
+	                <li><a href="#">Industrial Design</a></li>
+	                <li><a href="#">Web Development</a></li>
+	                <li><a href="#">Photography</a></li>
+	                <li><a href="#">Architecture</a></li>
+	                <li><a href="#">Fashion Design</a></li>
+	            </ul>
+	        </li>    
+	        <li class="span">In:</li>
+	        <li class="dropdown">
+	            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Los Angeles & Vicinity <b class="caret"></b></a>
+	            <ul class="dropdown-menu">
+	                <li><a href="#">Industrial Design</a></li>
+	                <li><a href="#">Web Development</a></li>
+	                <li><a href="#">Photography</a></li>
+	                <li><a href="#">Architecture</a></li>
+	                <li><a href="#">Fashion Design</a></li>
+	            </ul>
+	        </li>
+		</ul>
+     
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      	<ul class="nav navbar-nav navbar-right" id="sign-in-up-nav">
+				<li class="signup-link"><a href="/accounts/signup/">Join FREE</a></li>
+				<li class="hidden-xs"><span class="seperator">|</span></li>
+				<li class="login-link"><a href="/accounts/login/">Sign In</a></li>
+	        </ul>
+    	</div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+
+<!-- Content -->
+	<div id="content-wrapper" class="group">     
+	    <div class="container">   
+	        <div class="row">
+	            <div class="content-column">
+	                <div id="content">
+	                    <h1>Find Success After High School</h1>
+	                    <p>Powerful tools for students, parents, and guidance counselors to connect, communicate, and navigate the road to higher education.</p>
+	                    <div class="coming-soon-box">
+	                        <h3>Take a quick look</h3>
+	                        <span class="form-intro">I am a&nbsp;&nbsp;</span>
+	                        <form action="." method="post" class="form-inline">
+	                            
+
+	<div id="div_id_user_type" class="form-group"><div class="controls "><select class="select form-control" id="id_user_type" name="user_type"><option value="Student">Student</option><option value="Counselor">Counselor</option></select></div></div><div id="div_id_state" class="form-group"><label for="id_state" class="control-label  requiredField">
+					State<span class="asteriskField">*</span></label><div class="controls "><select class="select form-control" id="id_state" name="state"><option value="" selected="selected">State</option><option value="AK">AK</option><option value="AL">AL</option><option value="AR">AR</option><option value="AZ">AZ</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="IA">IA</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="MA">MA</option><option value="MD">MD</option><option value="ME">ME</option><option value="MI">MI</option><option value="MN">MN</option><option value="MO">MO</option><option value="MS">MS</option><option value="MT">MT</option><option value="NC">NC</option><option value="ND">ND</option><option value="NE">NE</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NV">NV</option><option value="NY">NY</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VA">VA</option><option value="VT">VT</option><option value="WA">WA</option><option value="WI">WI</option><option value="WV">WV</option><option value="WY">WY</option></select></div></div><input id="id_school_id" name="school_id" type="hidden"> <div id="div_id_school" class="form-group"><div class="controls "><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="textinput textInput form-control ui-autocomplete-input" id="id_school" maxlength="100" name="school" placeholder="My School Name" type="text" autocomplete="off"> </div></div>
+
+	                            <button class="btn btn-primary-color" type="submit">GO</button>
+	                        </form>
+	                    </div>
+	                    
+	                </div><!-- /#content -->
+	            </div><!-- /.content-column -->
+	        </div><!-- /.row -->
+	    </div><!-- /.container -->
+	</div>
+
+
+	<footer id="footer">
+		<div class="container">
+			<div clas="row">
+			<div class="col-xs-12 col-md-7 clearfix">
+			    <nav>
+			        <ul>
+			        	<li><a href="/faq/">HELP</a></li>
+			        	
+				        	<li><span class="seperator">|</span></li>
+				        	<li><a href="/company/">COMPANY</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/board-of-directors/">BOARD</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/contact/">CONTACT</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/press/">PRESS </a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/link-us/">LINK TO US</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/job-postings/">JOB POSTINGS</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/terms/">TERMS</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/privacy/">PRIVACY</a>
+		        		
+			        </li></ul>
+			    </nav>
+			</div>
+			<div class="col-xs-12 col-md-2">
+		    	<p class="legal">© 2014 CampusSteps</p>
+			</div>
+			<div class="col-xs-12 col-md-3">
+			    <ul class="social-sites">
+			    	<li><a href="#"><img src="//clearsteps.s3.amazonaws.com/images/footer-twitter-icon.png" alt="Twitter"></a></li>
+			    	<li><a href="#"><img src="//clearsteps.s3.amazonaws.com/images/footer-facebook-icon.png" alt="Facebook"></a></li>
+			    	<li><a href="#"><img src="//clearsteps.s3.amazonaws.com/images/footer-g-plus-icon.png" alt="Google+"></a></li>
+			    </ul>
+			</div>
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</footer>
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/clearsteps.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/shared.js?v=6"></script>
+
+
+</body>
+</html>
