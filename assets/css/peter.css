@@ -81,12 +81,16 @@
   	position: relative;
   	min-width: 0;
   	background-color: transparent;
-  	background-image: url('../img/glasses.jpg');
+  	/*background-image: url('../img/glasses.jpg');
   	background-position: center top;
   	background-repeat: no-repeat;
-  	background-size: 100%;
+  	background-size: 100%; */
 }
-
+html {
+	background: url('../img/glasses.jpg') no-repeat center 90px scroll;
+	background-size: cover
+}
+body{ background-color:transparent!important;}
 
 /* School Finder form */
 .headline {
@@ -107,6 +111,8 @@
 .school-finder .form-inline .form-group { text-align: left; margin-bottom: 15px; }
 
 .school-finder label { font-size: 15px; color:#FFF; font-weight:800; font-family: 'Avenir' }
+
+.controls.half-size input { height: 29px; }
 
 .school-finder input, .school-finder input:focus { 
 	border: none; 
@@ -138,7 +144,7 @@
 	padding: 5px 0;
 	margin-right: 10px;
 	overflow: hidden;
-	background: url('../img/down-caret-teal.png') no-repeat 396px center #ffffff;
+	background: url('../img/down-caret-teal.png') no-repeat 96% center #ffffff;
 	background-color: #fff;
 	border: 3px solid #bed0d1;
 	-webkit-border-radius: 0.6666666666666666px;
@@ -174,7 +180,7 @@
 .homepage #content-wrapper .container .school-finder form .form-group .controls.half-size { 
 	width: 206px; 
 	margin-right:0px;
-	background: url('../img/down-caret-teal.png') no-repeat 173px center #ffffff; 
+	background: url('../img/down-caret-teal.png') no-repeat 92% center #ffffff; 
 }
 
 .homepage #content-wrapper .container .school-finder form .form-group#div_id_education .controls.half-size { margin-right:10px; }
@@ -207,34 +213,65 @@
 	border-bottom:1px solid #111;
 }
 
-@media screen and (max-width: 767px) {
+/* Main Body */
+.thin { max-width: 380px; }
 
-  #learning-header { font-size:9px; }
 
-  .homepage #content-wrapper .container .school-finder { margin-left:0; }
 
-  .headline {
-	margin-top: 15px;
-	margin-bottom: 118px;
-	margin-left: 9px;
-	padding-left:20px;
-	font-family: 'avenir';
-	font-size: 19px;
-	color: white;
-	font-weight: lighter;
-	text-shadow: 0px 1px 0px #333;
-	text-align: left;
-	letter-spacing: .8px;
-	max-width: 600px;
+
+@media screen and (max-width: 768px) {
+
+	html { background-size: 103%; background-position: center 112px }
+
+	#learning-header { font-size:9px; }
+
+	.homepage #content-wrapper .container .school-finder { margin-left:0; }
+
+	.headline {
+		margin-top: 15px;
+		margin-bottom: 196px;
+		margin-left: 9px;
+		padding-left:0px;
+		padding-right:60px;
+		font-family: 'avenir';
+		font-size: 19px;
+		color: white;
+		font-weight: lighter;
+		text-shadow: 0px 1px 0px #333;
+		text-align: left;
+		letter-spacing: .8px;
+		max-width: 600px;
 	}
 
-}
+	#sign-in-up-nav li a, #sign-in-up-nav li { line-height: 29px; }
+	
+	#sign-in-up-nav li:last-child { margin: 0px 0 1px; }
 
-@media screen and (max-width: 768px ) {
+	.navbar-collapse { box-shadow: inset 0 0px 0 rgba(255,255,255,0); }
 
-	.subjects.nav-pills > li > a { padding:0px 0 3px}
+	.subjects.nav-pills > li > a { padding:0px 0 3px }
 
 	.nav li.span { padding:0px 0 3px }
+
+	ul.subjects.nav.nav-pills.pull-left { float: none!important; }
+
+	.homepage #content-wrapper .container .school-finder { 
+		max-width: 100%;
+		background-color: #777;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding;
+		border: 10px solid #333;
+		background-clip: padding-box;
+ }
+
+	.homepage #content-wrapper .container .school-finder form .form-group .controls { margin-right: 0px }
+
+	.homepage #content-wrapper .container .school-finder form .form-group .controls.half-size { width: 100%; } 
+
+
 
 }
 
