@@ -10596,7 +10596,7 @@ div.full-width-divider {
 .homepage #content-wrapper .container {
   position: relative;
   min-width: 0;
-  text-align: center;
+  /*text-align: center; PTG */
 }
 
 .splash #content-wrapper .container h1,
@@ -10609,7 +10609,7 @@ div.full-width-divider {
 
 .splash #content-wrapper .container p,
 .homepage #content-wrapper .container p {
-  max-width: 65%;
+ /* max-width: 65%; PTG */
   margin: 0 auto;
   font-size: 22px;
 }

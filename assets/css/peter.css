@@ -92,7 +92,9 @@ html {
 }
 body{ background-color:transparent!important;}
 
+
 /* School Finder form */
+
 .headline {
 	margin-top: 44px;
 	margin-bottom: 40px;
@@ -104,7 +106,7 @@ body{ background-color:transparent!important;}
 	text-shadow: 1px 1px 1px #333;
 	text-align: left;
 	letter-spacing:.8px; 
-	max-width: 600px;
+	max-width: 65%;
 }
 .school-finder h3 { font-family: 'avenir'; text-align: center}
 
@@ -214,18 +216,32 @@ body{ background-color:transparent!important;}
 }
 
 /* Main Body */
-.thin { max-width: 380px; }
+.spacer {
+    margin-top: 180px; /* define margin as you see fit */
+}
+.title { 
+	font-family: 'Avenir';
+	font-size:18px;
+	font-weight:800;
+	margin-top:50px;
+}
 
 
+@media screen and (max-width:470px) {
+		html { background-size: 135%; background-position: -123px 117px; }
+}
 
+@media screen and (min-width: 470px) and (max-width: 768px) {
+		html { background-size: 110%; background-position: center 112px }
+}
 
 @media screen and (max-width: 768px) {
-
-	html { background-size: 103%; background-position: center 112px }
 
 	#learning-header { font-size:9px; }
 
 	.homepage #content-wrapper .container .school-finder { margin-left:0; }
+
+	.spacer { margin-top: -50px; }
 
 	.headline {
 		margin-top: 15px;
@@ -240,7 +256,6 @@ body{ background-color:transparent!important;}
 		text-shadow: 0px 1px 0px #333;
 		text-align: left;
 		letter-spacing: .8px;
-		max-width: 600px;
 	}
 
 	#sign-in-up-nav li a, #sign-in-up-nav li { line-height: 29px; }
@@ -290,4 +305,223 @@ body{ background-color:transparent!important;}
 		margin-left:40px 
 	}
 
+}
+
+@media screen and (max-width:1200px) and (min-width:470px)  {
+
+	.spacer { margin-top: 50px; }
+
+}
+
+/* Footers */
+
+#footer {
+  min-width: 1200px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  color: #c2c2c2;
+  background-color: #f5f5f5;
+  font-size:11px;
+}
+
+#footer:before,
+#footer:after {
+  display: table;
+  content: " ";
+}
+
+#footer:after {
+  clear: both;
+}
+
+#footer:before,
+#footer:after {
+  display: table;
+  content: " ";
+}
+
+#footer:after {
+  clear: both;
+}
+
+#footer ul {
+  float: left;
+  padding: 5px 0;
+  padding-left: 0;
+  margin: 7.5px -15px;
+  margin: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+#footer ul:before,
+#footer ul:after {
+  display: table;
+  content: " ";
+}
+
+#footer ul:after {
+  clear: both;
+}
+
+#footer ul:before,
+#footer ul:after {
+  display: table;
+  content: " ";
+}
+
+#footer ul:after {
+  clear: both;
+}
+
+#footer ul > li {
+  position: relative;
+  display: block;
+}
+
+#footer ul > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+#footer ul > li > a:hover,
+#footer ul > li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+
+#footer ul > li.disabled > a {
+  color: #999999;
+}
+
+#footer ul > li.disabled > a:hover,
+#footer ul > li.disabled > a:focus {
+  color: #999999;
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+#footer ul .open > a,
+#footer ul .open > a:hover,
+#footer ul .open > a:focus {
+  background-color: #eeeeee;
+  border-color: #0f65d9;
+}
+
+#footer ul .open > a .caret,
+#footer ul .open > a:hover .caret,
+#footer ul .open > a:focus .caret {
+  border-top-color: #0a4491;
+  border-bottom-color: #0a4491;
+}
+
+#footer ul .nav-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+#footer ul > li > a > img {
+  max-width: none;
+}
+
+#footer ul > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+
+@media (max-width: 767px) {
+  #footer ul .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  #footer ul .open .dropdown-menu > li > a,
+  #footer ul .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+  #footer ul .open .dropdown-menu > li > a {
+    line-height: 20px;
+  }
+  #footer ul .open .dropdown-menu > li > a:hover,
+  #footer ul .open .dropdown-menu > li > a:focus {
+    background-image: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #footer ul {
+    float: left;
+    margin: 0;
+  }
+  #footer ul > li {
+    float: left;
+  }
+  #footer ul > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+#footer ul li {
+  display: inline-block;
+  padding: 5px 0;
+}
+
+#footer ul li a {
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #c2c2c2;
+  -webkit-transition: color 500ms ease;
+          transition: color 500ms ease;
+}
+
+#footer ul li a:hover {
+  color: #767676;
+  background-color: transparent;
+}
+
+#footer ul li .seperator {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 20px;
+  color: #c2c2c2;
+}
+
+#footer p.legal {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 30px;
+  line-height: 20px;
+  color: #c2c2c2;
+}
+
+#footer ul.social-sites {
+  display: inline-block;
+  float: right;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 991px) {
+  #footer p.legal {
+    margin-left: 15px;
+  }
+  #footer ul.social-sites {
+    display: block;
+    float: none;
+    width: 200px;
+    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
