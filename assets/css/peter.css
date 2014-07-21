@@ -1,22 +1,26 @@
 /* Top Learning Header */
+
 .design-color { background: #3ea8af; }
+
 #learning-header { font-family: 'avenir'; font-size:12px; text-transform: uppercase; font-weight:600; background: #000; }
+
 #learning-header a { color:white; }
+
 #learning-header .nav-pills>li.active>a, .nav-pills>li.active>a:focus li:active { background: #3ea8af; }
+
 #learning-header .nav-pills>li>a:hover { background: #3ea8af }
+
 #learning-header .nav-pills>li>a { border-radius: 0px; padding:8px 17px; }
+
 #learning-header .nav-pills>li+li { margin: 0px; }
 
-@media screen and (max-width: 767px) {
-  .homepage #content-wrapper {
-    background-image: none!important;
-  }
-  #learning-header { font-size:9px; }
-}
 
 /* Main Header */
+
 .cs-brand{ margin-left: 10px; }
-.cs-brand img { width: 210px; }
+
+.cs-brand img { width: 209px; }
+
 .responsive .navbar {
 	border-radius: 0;
 	margin-bottom: 0;
@@ -24,7 +28,9 @@
 	min-height: 53px;
 	border: none;
 }
+
 .navbar-toggle .icon-bar { background: #FFF }
+
 .subjects a {
 	color: white;
 	font-family: Avenir;
@@ -33,36 +39,44 @@
 	font-size: 14px;
 	letter-spacing: -.25px;
 }
+
 .subjects.nav a .caret {
 	border-top-color: #FFF;
 	border-bottom-color: #FFF;
 }
+
 .subjects.nav-pills > li > a { border-radius:0; padding: 12px 0px; letter-spacing: -.5px; }
+
 .subjects.nav-pills > li > a:hover, .subjects.nav-pills > li > a:focus, .subjects.nav-pills a:hover .caret { 
 	color:#3ea8af; 
 	border-bottom-color:#3ea8af; 
 	border-top-color:#3ea8af; 
 }
+
 .subjects.nav-pills > li > a:first-child {
 	padding-right: 9px;
 	padding-left: 12px;
 }
+
 .nav li.span {
 	padding: 12px 7px;
 	color: #FFF;
 	font-weight:300;
 	line-height:35px;
 }
+
 #sign-in-up-nav li a, #sign-in-up-nav li{
 	line-height: 58px;
   	color: #fff;
   	padding: 0 9px
 }
+
 #sign-in-up-nav > li > a:hover, #sign-in-up-nav > li > a:focus{
 	background: transparent;
 	opacity: .7;
 	color: #fff
 }
+
 .homepage #content-wrapper {
   	position: relative;
   	min-width: 0;
@@ -71,4 +85,172 @@
   	background-position: center top;
   	background-repeat: no-repeat;
   	background-size: 100%;
+}
+
+
+/* School Finder form */
+.headline {
+	margin-top: 44px;
+	margin-bottom: 40px;
+	margin-left:100px;
+	font-family: 'avenir';
+	font-size: 38px;
+	color: white;
+	font-weight: lighter;
+	text-shadow: 1px 1px 1px #333;
+	text-align: left;
+	letter-spacing:.8px; 
+	max-width: 600px;
+}
+.school-finder h3 { font-family: 'avenir'; text-align: center}
+
+.school-finder .form-inline .form-group { text-align: left; margin-bottom: 15px; }
+
+.school-finder label { font-size: 15px; color:#FFF; font-weight:800; font-family: 'Avenir' }
+
+.school-finder input, .school-finder input:focus { 
+	border: none; 
+	box-shadow: none; 
+	font-size: 17px;
+	font-family: 'avenir';
+	font-weight: 400px;
+	color: #86a1a3; 
+}
+
+.homepage #content-wrapper .container .school-finder {
+	max-width: 475px;
+	text-align: left;
+	padding:27px 24px;
+	margin-top: 27px;
+	margin-bottom: 50px;
+	margin-left: 100px;
+	background-color: rgba(250, 250, 250, 0.25);
+	-webkit-border-radius: 1px 3px 3px 3px;
+	 -moz-border-radius: 1px 3px 3px 3px;
+	      border-radius: 1px 3px 3px 3px;
+	-webkit-background-clip: padding-box;
+	 -moz-background-clip: padding;
+	      background-clip: padding-box;
+}
+
+.homepage #content-wrapper .container .school-finder form .form-group .controls {
+	position: relative;
+	padding: 5px 0;
+	margin-right: 10px;
+	overflow: hidden;
+	background: url('../img/down-caret-teal.png') no-repeat 396px center #ffffff;
+	background-color: #fff;
+	border: 3px solid #bed0d1;
+	-webkit-border-radius: 0.6666666666666666px;
+	 -moz-border-radius: 0.6666666666666666px;
+	      border-radius: 0.6666666666666666px;
+	-webkit-box-shadow: inset 0px 0px 10px 1px #FEFEFE;
+	      box-shadow: inset 0px 0px 10px 1px #FEFEFE;
+}
+
+#content-wrapper .container .school-finder form .form-group select,
+.homepage #content-wrapper .container .school-finder form .form-group select {
+	width: 400px;
+	height: 28px;
+	padding: 0;
+	margin-left: 10px;
+	font-size: 17px;
+	font-family: 'avenir';
+	font-weight: 400px;
+	color: #86a1a3;
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	-webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+	-webkit-appearance: none;
+	cursor: pointer
+}
+
+.homepage #content-wrapper .container .school-finder form .form-group .half-size select {
+ 	width:200px;
+}
+
+.homepage #content-wrapper .container .school-finder form .form-group .controls.half-size { 
+	width: 206px; 
+	margin-right:0px;
+	background: url('../img/down-caret-teal.png') no-repeat 173px center #ffffff; 
+}
+
+.homepage #content-wrapper .container .school-finder form .form-group#div_id_education .controls.half-size { margin-right:10px; }
+
+.homepage #content-wrapper .container .school-finder .form-intro {
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.school-finder h3 {
+	padding: 0;
+	margin: 0px auto 22px;
+	font-size: 22px;
+	line-height: 29px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #fff;
+	max-width: 298px
+}
+
+.school-finder button.btn-action:hover { background-color: #f4f402 }
+.school-finder button.btn-action { 
+	font-size:19px; 
+	background: #e3e307; 
+	font-weight: 800; 
+	padding: 11px 62px;
+	margin: 15px auto 8px;
+	display: block;
+	border-bottom:1px solid #111;
+}
+
+@media screen and (max-width: 767px) {
+
+  #learning-header { font-size:9px; }
+
+  .homepage #content-wrapper .container .school-finder { margin-left:0; }
+
+  .headline {
+	margin-top: 15px;
+	margin-bottom: 118px;
+	margin-left: 9px;
+	padding-left:20px;
+	font-family: 'avenir';
+	font-size: 19px;
+	color: white;
+	font-weight: lighter;
+	text-shadow: 0px 1px 0px #333;
+	text-align: left;
+	letter-spacing: .8px;
+	max-width: 600px;
+	}
+
+}
+
+@media screen and (max-width: 768px ) {
+
+	.subjects.nav-pills > li > a { padding:0px 0 3px}
+
+	.nav li.span { padding:0px 0 3px }
+
+}
+
+@media screen and (max-width: 900px) and (min-width:768px) {
+
+	#sign-in-up-nav li a, #sign-in-up-nav li { padding: 0 4px }
+
+	.subjects.nav-pills > li > a { padding:12px 0}
+
+	.nav li.span { padding:12px 0 }
+}
+
+@media screen and (min-width: 900px) {
+
+	.subjects.nav.nav-pills.pull-left {
+		margin-left:40px 
+	}
+
 }
