@@ -67,7 +67,7 @@
   	position: relative;
   	min-width: 0;
   	background-color: transparent;
-  	background-image: url('assets/img/glasses.jpg');
+  	background-image: url('/img/glasses.jpg');
   	background-position: center top;
   	background-repeat: no-repeat;
   	background-size: 100%;
