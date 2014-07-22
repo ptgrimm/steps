@@ -174,7 +174,9 @@ div.col-md-3 {
 #footer ul > li > a > img {
   max-height: 21px;
 }
-
+ul.social-sites li:first-child {
+  margin-left: -7px;
+}
 
 @media (max-width: 768px) {
   #footer ul .open .dropdown-menu {
