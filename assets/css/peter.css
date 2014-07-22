@@ -270,7 +270,7 @@ div.title:first-child { margin-top: 0; }
 
 	#learning-header { font-size:9px; }
 
-	#learning-header .nav-pills > li > a { border-radius: 0px; padding: 8px 10px; }
+	#learning-header .nav-pills > li > a { border-radius: 0px; padding: 8px 6px; }
 
 	.homepage #content-wrapper .container .school-finder { margin-left:0; }
 
