@@ -105,7 +105,7 @@ select { -moz-appearance: window; }
 .headline {
 	margin-top: 44px;
 	margin-bottom: 40px;
-	margin-left:100px;
+	margin-left:20px;
 	font-family: 'avenir';
 	font-size: 38px;
 	color: white;
@@ -138,7 +138,7 @@ select { -moz-appearance: window; }
 	padding:27px 24px;
 	margin-top: 27px;
 	margin-bottom: 50px;
-	margin-left: 100px;
+	margin-left: 20px;
 	background-color: rgba(250, 250, 250, 0.25);
 	-webkit-border-radius: 1px 3px 3px 3px;
 	 -moz-border-radius: 1px 3px 3px 3px;
@@ -224,6 +224,7 @@ select { -moz-appearance: window; }
 
 
 /* Main Body */
+
 .spacer {
     margin-top: 150px; /* define margin as you see fit */
 }
@@ -238,16 +239,33 @@ select { -moz-appearance: window; }
 .gray-bg {
 	background:#f5f5f5
 }
-
+.dropdown-toggle .hidden-xs {
+    display: inline-block !important;
+}
 
 div.title:first-child { margin-top: 0; }
 
+.dropdown-toggle .hidden-xs {
+
+    display: inline-block !important;
+
+}
+
+
+/* Media Queries */
+
 @media screen and (max-width:470px) {
-		html { background-size: 135%; background-position: -123px 115px; }
+
+		html {  background-position: -153px 119px;  background-size: 162% auto;
+
+	}
+
 }
 
 @media screen and (min-width: 470px) and (max-width: 768px) {
+
 		html { background-size: 110%; background-position: center 112px }
+
 }
 
 @media screen and (max-width: 768px) {
