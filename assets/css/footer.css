@@ -18,6 +18,7 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer { /*ptg*/
+  font-family: 'avenir'
 }
 
 #footer p {
@@ -170,7 +171,9 @@ div.col-md-3 {
   font-weight: 100;
   line-height: 10px;
 }
-
+#footer ul > li > a > img {
+  max-height: 21px;
+}
 
 
 @media (max-width: 768px) {
@@ -207,6 +210,10 @@ div.col-md-3 {
   #footer ul > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+  div.col-md-4:nth-child(3) {
+    text-align: right;
+    padding-right: 90px;
   }
 }
 
@@ -245,12 +252,11 @@ div.col-md-3 {
   width: 115px;
   font-size: 10px;
 }
-
-#footer ul.social-sites {
-  display: inline-block;
-  float: right;
-  margin-right: 40px;
+span.legal{
+  font-size: 11px;
+  line-height: 70px;
 }
+
 
 @media screen and (max-width: 991px) {
   #footer p.legal {
@@ -265,3 +271,4 @@ div.col-md-3 {
     margin-left: auto;
   }
 }
+
