@@ -280,12 +280,12 @@ div.title:first-child { margin-top: 0; }
 
 	.headline {
 		margin-top: 15px;
-		margin-bottom: 196px;
+		margin-bottom: 190px;
 		margin-left: 9px;
 		padding-left:0px;
 		padding-right:60px;
 		font-family: 'avenir';
-		font-size: 19px;
+		font-size: 22px;
 		color: white;
 		font-weight: lighter;
 		text-shadow: 0px 1px 0px #333;
@@ -334,10 +334,10 @@ div.title:first-child { margin-top: 0; }
 	.headline {
 		margin-top: 19px;
 		margin-bottom: 16px;
-		margin-left: 100px;
+		margin-left: 20px;
 		font-family: 'avenir';
-		font-size: 23px;
-		max-width: 65%;
+		font-size: 28px;
+		max-width: 75%;
 		line-height: 28px;
 		}
 
@@ -346,6 +346,10 @@ div.title:first-child { margin-top: 0; }
 @media screen and (min-width: 1000px) {
 
 	.subjects.nav.nav-pills.pull-left { margin-left:40px }
+
+	ul.nav.nav-pills.pull-right {
+		margin-right: -2%;
+	}
 
 }
 
