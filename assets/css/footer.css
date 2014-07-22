@@ -1,0 +1,240 @@
+
+/****** Footer Stuff ******/
+
+#footer {
+  padding-top: 30px;
+  padding-bottom: 25px;
+  color: #FFF;
+  background-color: #23a3ab;
+  font-size:11px;
+}
+
+#footer:before,
+#footer:after {
+  display: table;
+  content: " ";
+}
+
+#footer:after {
+  clear: both;
+}
+
+#footer:before,
+#footer:after {
+  display: table;
+  content: " ";
+}
+
+#footer:after {
+  clear: both;
+}
+
+#footer ul {
+  float: left;
+  padding: 5px 0;
+  padding-left: 0;
+  margin: 7.5px -15px;
+  margin: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+#footer ul:before,
+#footer ul:after {
+  display: table;
+  content: " ";
+}
+
+#footer ul:after {
+  clear: both;
+}
+
+#footer ul:before,
+#footer ul:after {
+  display: table;
+  content: " ";
+}
+
+#footer ul:after {
+  clear: both;
+}
+
+#footer ul > li {
+  position: relative;
+  display: block;
+}
+
+#footer ul > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+#footer ul > li > a:hover,
+#footer ul > li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+
+#footer ul > li.disabled > a {
+  color: #999999;
+}
+
+#footer ul > li.disabled > a:hover,
+#footer ul > li.disabled > a:focus {
+  color: #999999;
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+#footer ul .open > a,
+#footer ul .open > a:hover,
+#footer ul .open > a:focus {
+  background-color: #eeeeee;
+  border-color: #0f65d9;
+}
+
+#footer ul .open > a .caret,
+#footer ul .open > a:hover .caret,
+#footer ul .open > a:focus .caret {
+  border-top-color: #0a4491;
+  border-bottom-color: #0a4491;
+}
+
+#footer ul .nav-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+#footer ul > li > a > img {
+  max-width: none;
+}
+
+#footer ul > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+
+footer div.col-md-4 {
+  text-align: left;
+  margin: 35px 0 35px;
+}
+#footer .col-sm-3.col-md-3{
+  display: inline-block;
+}
+#footer .col-sm-3.col-md-3 ul li {
+  display: block;
+  float: none;
+}
+#footer div.col-xs-12.col-md-7.clearfix {
+  margin-left: 0px;
+  padding-left: 0;
+}
+#footer .col-xs-12 ul li:first-child {
+  padding-left: 0px;
+  margin-left: -13px;
+}
+div.col-md-3 {
+  font-family: 'avenir';
+  font-weight: 100;
+  line-height: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+  #footer ul .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  #footer ul .open .dropdown-menu > li > a,
+  #footer ul .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+  #footer ul .open .dropdown-menu > li > a {
+    line-height: 20px;
+  }
+  #footer ul .open .dropdown-menu > li > a:hover,
+  #footer ul .open .dropdown-menu > li > a:focus {
+    background-image: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #footer ul {
+    float: left;
+    margin: 0;
+  }
+  #footer ul > li {
+    float: left;
+  }
+  #footer ul > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+#footer ul li {
+  display: inline-block;
+  padding: 5px 0;
+}
+
+#footer ul li a {
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #FFF;
+  -webkit-transition: color 500ms ease;
+          transition: color 500ms ease;
+}
+
+#footer ul li a:hover {
+  color: #767676;
+  background-color: transparent;
+}
+
+#footer ul li .seperator {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 20px;
+  color: #c2c2c2;
+}
+
+#footer p.legal {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 30px;
+  line-height: 20px;
+  width: 115px;
+  font-size: 10px;
+}
+
+#footer ul.social-sites {
+  display: inline-block;
+  float: right;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 991px) {
+  #footer p.legal {
+    margin-left: 15px;
+  }
+  #footer ul.social-sites {
+    display: block;
+    float: none;
+    width: 200px;
+    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
