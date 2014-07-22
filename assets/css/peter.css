@@ -249,6 +249,16 @@ nav li.hidden-xs a:hover {
 	pointer-events: initial;
 }
 
+li.hidden-xs.gap { margin-left: 190px }
+
+@media screen and (max-width:1100px) {
+
+	li.hidden-xs.gap {
+		display:none!important;
+	}
+
+}
+
 
 /* Media Queries */
 
