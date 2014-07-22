@@ -243,7 +243,11 @@ select { -moz-appearance: window; }
 
 div.title:first-child { margin-top: 0; }
 
-
+nav li.hidden-xs a:hover {
+	background: #3ea8af;
+	color: white!important;
+	pointer-events: initial;
+}
 
 
 /* Media Queries */
