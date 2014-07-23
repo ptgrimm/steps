@@ -273,23 +273,24 @@ select { -moz-appearance: window; }
 	letter-spacing: -.6px;
 }
 
-#chevron {
-  position: relative;
-  text-align: center;
-  padding: 12px;
-  margin-bottom: 6px;
-  height: 137px;
-  width: 300px;
-  display:inline-block;
-  font-family: 'avenir';
-  color: #404040
+.chevron {
+	  position: relative;
+	  text-align: center;
+	  padding: 12px;
+	  margin-bottom: 6px;
+	  height: 137px;
+	  width: 300px;
+	  display:inline-block;
+	  font-family: 'avenir';
+	  color: #404040;
+	  cursor: pointer;
 }
 
-#chevron:hover:after, #chevron:hover:before { 
+.chevron:hover:after, .chevron:hover:before { 
   background-color:rgba(250, 250, 250, 1)
 }
 
-#chevron:before {
+.chevron:before {
   content: '';
   position: absolute;
   top: 0;
@@ -304,7 +305,7 @@ select { -moz-appearance: window; }
   transform: skew(0deg, 6deg);
 }
 
-#chevron:after {
+.chevron:after {
   content: '';
   position: absolute;
   top: 70px;
@@ -347,6 +348,13 @@ nav li.hidden-xs a:hover {
 
 li.hidden-xs.gap { margin-left: 160px }
 
+
+
+
+
+/* Media Queries */
+
+
 @media screen and (max-width:1100px) {
 
 	li.hidden-xs.gap {
@@ -354,9 +362,6 @@ li.hidden-xs.gap { margin-left: 160px }
 	}
 
 }
-
-
-/* Media Queries */
 
 @media screen and (max-width:470px) {
 
@@ -471,35 +476,38 @@ li.hidden-xs.gap { margin-left: 160px }
 	}
 	.trans{
 		margin-top:-31px;
-		padding: 0
+		padding: 10px 0 2px
 	}
 	.chevron{
-		width: 267px
+		width: 253px
+	}
+	.big-number {
+		font-size: 66px;
+		float: left;
+		width: 50px;
+		padding-left: 3px;
 	}
 
 }
 
-/*
-@media screen and (max-width: 1000px) and (min-width:768px) {
+@media screen and (min-width: 768px) and (max-width: 880px) {
+	
+	.trans {
+		background: rgba(90, 90, 95, 1);
+	}
 
-	#sign-in-up-nav li a, #sign-in-up-nav li { padding: 0 4px }
+	.chevron{
+		width: 239px
+	}
 
-	.subjects.nav-pills > li > a { padding:12px 0}
-
-	.nav li.span { padding:12px 0 }
-
-	.headline {
-		margin-top: 19px;
-		margin-bottom: 16px;
-		margin-left: 20px;
-		font-family: 'avenir';
-		font-size: 28px;
-		max-width: 75%;
-		line-height: 28px;
-		}
+	.step-text {
+		line-height: 20px;
+		max-width: 247px;
+		margin-top: -3px;
+		font-size: 14px;
+	}
 
 }
-*/
 
 @media screen and (min-width: 1000px) {
 

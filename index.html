@@ -44,6 +44,14 @@ $( document ).ready(function() {
         }
       });
     });
+
+// Scroll down on click
+    $("#learn").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $("#learn-anchor").offset().top
+	    }, 1000);
+	});
+
 });
 </script>
   
@@ -214,7 +222,7 @@ $( document ).ready(function() {
 
 	<div class="trans">
 		<div class="steps-wrapper">
-			    <a id="chevron" href="#">
+			    <a class="chevron" id="learn">
 			        <div class="inside">
 			        	<div class="big-number">1</div>
 				           <div class="step-title">LEARN</div>
@@ -223,7 +231,7 @@ $( document ).ready(function() {
 				           </div>
 			        </div>
 			    </a>
-		    	<a id="chevron" href="#">
+		    	<a id="find" class="chevron">
 			         <div class="inside"><div class="big-number">2</div>
 				           <div class="step-title">FIND</div>
 				           <div class="step-text"><div class="b">SCHOOL LISTINGS</div>
@@ -231,7 +239,7 @@ $( document ).ready(function() {
 				           </div>
 			        </div>
 		  		</a>
-		    	<a id="chevron" href="#">
+		    	<a id="apply" class="chevron">
 			         <div class="inside"><div class="big-number">3</div>
 				           <div class="step-title">APPLY</div>
 				           <div class="step-text"><div class="b">STEPS PROGRAM</div>
@@ -242,9 +250,9 @@ $( document ).ready(function() {
 		</div>
 	<!--<img src="assets/img/three-steps.png" class="img-responsive" alt="Campus Steps">-->
 	</div>
-	<div class="content-with-bg spacer">
+	<div class="content-with-bg spacer" id="learn-anchor">
 	    <div class="container">
-	        <div class="row">
+	        <div class="row" >
 	        	<div class="col-md-8">
 		        		<div class="title">Overview</div>
 		        		<p>Graphic Designers work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
