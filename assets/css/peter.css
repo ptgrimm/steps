@@ -1,6 +1,6 @@
 html {
-	background: url('../img/glasses.jpg') no-repeat center 90px scroll;
-	background-size: cover;
+	background: url('../img/glasses.jpg') no-repeat right 90px scroll;
+	background-size: 116%;
 	overflow-x: hidden;
 }
 
@@ -24,6 +24,7 @@ select { -moz-appearance: window; }
 #learning-header .nav-pills>li>a { border-radius: 0px; padding:8px 16px; }
 
 #learning-header .nav-pills>li+li { margin: 0px; }
+
 
 
 /* Main Header */
@@ -79,7 +80,7 @@ select { -moz-appearance: window; }
 #sign-in-up-nav li a, #sign-in-up-nav li{
 	line-height: 58px;
   	color: #fff;
-  	padding: 0 7px
+  	padding: 0 6px
 }
 
 #sign-in-up-nav > li > a:hover, #sign-in-up-nav > li > a:focus{
@@ -92,12 +93,19 @@ select { -moz-appearance: window; }
   	position: relative;
   	min-width: 0;
   	background-color: transparent;
-  	/*background-image: url('../img/glasses.jpg');
-  	background-position: center top;
-  	background-repeat: no-repeat;
-  	background-size: 100%; */
 }
 
+.content-with-bg{
+	padding-top: 45px;
+}
+
+.trans {
+	background: rgba(250, 250, 250, 0.25);
+	display: block;
+	margin-top: -10px;
+	padding: 7px 0;
+	text-align: center;
+}
 
 
 /* School Finder form */
@@ -113,7 +121,7 @@ select { -moz-appearance: window; }
 	text-shadow: 1px 1px 1px #333;
 	text-align: left;
 	letter-spacing:.8px; 
-	max-width: 65%;
+	max-width: 78%;
 }
 .school-finder h3 { font-family: 'avenir'; text-align: center}
 
@@ -135,7 +143,7 @@ select { -moz-appearance: window; }
 .homepage #content-wrapper .container .school-finder {
 	max-width: 475px;
 	text-align: left;
-	padding:27px 24px;
+	padding:21px 24px;
 	margin-top: 27px;
 	margin-bottom: 50px;
 	margin-left: 20px;
@@ -189,10 +197,12 @@ select { -moz-appearance: window; }
 .homepage #content-wrapper .container .school-finder form .form-group .controls.half-size { 
 	width: 206px; 
 	margin-right:0px;
-	background: url('../img/down-caret-teal.png') no-repeat 92% center #ffffff; 
+	background: url('../img/down-caret-teal.png') no-repeat 97% center #ffffff; 
 }
 
 .homepage #content-wrapper .container .school-finder form .form-group#div_id_education .controls.half-size { margin-right:10px; }
+
+#div_id_user_type { margin-right: 10px; }
 
 .homepage #content-wrapper .container .school-finder .form-intro {
 	font-size: 16px;
@@ -203,8 +213,8 @@ select { -moz-appearance: window; }
 .school-finder h3 {
 	padding: 0;
 	margin: 0px auto 22px;
-	font-size: 22px;
-	line-height: 29px;
+	font-size: 21px;
+	line-height: 27px;
 	font-weight: 700;
 	letter-spacing: 1px;
 	color: #fff;
@@ -223,11 +233,97 @@ select { -moz-appearance: window; }
 }
 
 
+/**    1 2 3 Steps   **/
+
+.steps-wrapper{
+    margin:12px
+}
+.inside{
+	color: #404040;
+	z-index: 9999;
+	position: absolute;
+	font-size: 17px;
+	margin-top: 6px;
+	padding-left: 9px;
+	text-align: left;
+}
+
+.big-number{ 
+	font-size: 76px;
+	float: left;
+	width: 66px;
+	padding-left: 11px;
+}
+
+.step-title {
+	font-size: 33px;
+	color: #23a3ab;
+	margin-top:-4px;
+}
+
+.step-text{
+	line-height: 20px;
+	max-width: 247px;
+	margin-top: -3px;
+}
+
+.inside .b {
+	display: block;
+	font-weight: 600;
+	letter-spacing: -.6px;
+}
+
+#chevron {
+  position: relative;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  height: 137px;
+  width: 300px;
+  display:inline-block;
+  font-family: 'avenir';
+  color: #404040
+}
+
+#chevron:hover:after, #chevron:hover:before { 
+  background-color:rgba(250, 250, 250, 1)
+}
+
+#chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 51%;
+  width: 100%;
+  background: rgba(250, 250, 250, 0.70);
+  -webkit-transform: skew(25deg, 0deg);
+  -moz-transform: skew(0deg, 6deg);
+  -ms-transform: skew(0deg, 6deg);
+  -o-transform: skew(0deg, 6deg);
+  transform: skew(0deg, 6deg);
+}
+
+#chevron:after {
+  content: '';
+  position: absolute;
+  top: 70px;
+  right: 0;
+  height: 51%;
+  width: 100%;
+  background: rgba(250, 250, 250, 0.7);
+  -webkit-transform: skew(-25deg, 0deg);
+  -moz-transform: skew(0deg, -6deg);
+  -ms-transform: skew(0deg, -6deg);
+  -o-transform: skew(0deg, -6deg);
+  transform: skew(0deg, -6deg);
+}
+
+
+
+
 /* Main Body */
 
-.spacer {
-    margin-top: 150px; /* define margin as you see fit */
-}
 
 .title { 
 	font-family: 'Avenir';
@@ -249,7 +345,7 @@ nav li.hidden-xs a:hover {
 	pointer-events: initial;
 }
 
-li.hidden-xs.gap { margin-left: 190px }
+li.hidden-xs.gap { margin-left: 160px }
 
 @media screen and (max-width:1100px) {
 
@@ -334,8 +430,56 @@ li.hidden-xs.gap { margin-left: 190px }
 
 	.homepage #content-wrapper .container .school-finder form .form-group .controls.half-size { width: 100%; } 
 
+	.homepage #content-wrapper .container .school-finder { margin-bottom:0; }
+	
+	.trans {
+		display: block;
+		margin: 0px 0 37px;
+		padding: 0px 0;
+	}
+
+	.img-responsive {
+		background: rgba(25, 25, 25, 0.25);
+		padding: 10px 0;
+	}
+
 }
 
+
+@media screen and (min-width: 768px) {
+
+	.homepage #content-wrapper {
+	  	position: relative;
+	  	min-width: 0;
+	  	background-color: transparent;
+	  	max-height: 785px;
+	  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width:1130px) {
+
+	 html{
+		background: url('../img/glasses.jpg') no-repeat right 90px scroll;
+		background-size: 138%;
+	}
+	.headline {
+		margin-top: 28px;
+		margin-bottom: 26px;
+		margin-left: 20px;
+		line-height:41px;
+	}
+	.trans{
+		margin-top:-31px;
+		padding: 0
+	}
+	.chevron{
+		width: 267px
+	}
+
+}
+
+/*
 @media screen and (max-width: 1000px) and (min-width:768px) {
 
 	#sign-in-up-nav li a, #sign-in-up-nav li { padding: 0 4px }
@@ -355,27 +499,48 @@ li.hidden-xs.gap { margin-left: 190px }
 		}
 
 }
+*/
 
 @media screen and (min-width: 1000px) {
 
-	.subjects.nav.nav-pills.pull-left { margin-left:40px }
+	.subjects.nav.nav-pills.pull-left { margin-left: 40px }
 
 	ul.nav.nav-pills.pull-right {
+
 		margin-right: -2%;
+
 	}
+
 
 }
 
+	.content-with-bg{
+		background:url('../img/gray.png') no-repeat 940px 45px scroll;
+		background-color: white;
+	}
+
+
+/*
+
+.spacer {
+    margin-top: 150px; /* define margin as you see fit 
+}
 @media screen and (max-width:768px) and (min-width:290px)  {
 
 	.spacer { margin-top: 10px; }
 
 }
 
-@media screen and (max-width:1200px) and (min-width:1000px)  {
+@media screen and (max-width:1280px) and (min-width:1000px)  {
 
-	.spacer { margin-top: 50px; }
+	.spacer { margin-top: 65px; }
 
 }
 
 
+@media screen and (max-width:1350px) and (min-width:1280px)  {
+
+	.spacer { margin-top: 100px; }
+
+}
+*/
