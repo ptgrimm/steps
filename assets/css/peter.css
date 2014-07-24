@@ -546,7 +546,7 @@ li.hidden-xs.gap { margin-left: 160px }
 @media screen and (min-width: 768px) and (max-width: 880px) {
 	
 	.trans {
-		background: rgba(90, 90, 95, 1);
+		background: rgba(210, 210, 210, 1);
 	}
 
 	.chevron{
