@@ -147,6 +147,8 @@ body {
   line-height: 20px;
 }
 
+#footer ul.steps-links li, #footer ul.steps-links li a { padding: 0 }
+
 footer div.col-md-4 {
   text-align: left;
   margin: 35px 0 35px;
@@ -233,7 +235,7 @@ ul.social-sites li:first-child {
 }
 
 #footer ul li a:hover {
-  color: #767676;
+  opacity:.75;
   background-color: transparent;
 }
 
