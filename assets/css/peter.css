@@ -6,19 +6,19 @@ html.design {
 }
 
 html.trucking {
-	background: url('../img/trucking.jpg') no-repeat right -290px scroll;
+	background: url('../img/trucking.jpg') no-repeat right -12% scroll;
 	background-size: 108%;
 	overflow-x: hidden;
 }
 
 html.business {
-	background: url('../img/business.jpg') no-repeat -28px 90px scroll;
+	background: url('../img/business.jpg') no-repeat right 90px scroll;
 	background-size: 105%;
 	overflow-x: hidden;
 }
 
 html.nursing {
-	background: url('../img/nursing.jpg') no-repeat right 39px scroll;
+	background: url('../img/nursing.jpg') no-repeat right 90px scroll;
 	background-size: 100%;
 	overflow-x: hidden;
 }
@@ -43,7 +43,8 @@ select { -moz-appearance: window; }
 
 /*  Business  */
 html.business nav li.hidden-xs a:hover, html.business #learning-header .nav-pills>li.active>a, .nav-pills>li.active>a:focus li:active, 
-html.business #learning-header .nav-pills>li>a:hover, html.business .color, html.trucking .subjects.nav-pills > li > a:hover, .subjects.nav-pills > li > a:focus, .subjects.nav-pills a:hover .caret { 
+html.business #learning-header .nav-pills>li>a:hover, html.business .color, html.trucking .subjects.nav-pills > li > a:hover, 
+.subjects.nav-pills > li > a:focus, .subjects.nav-pills a:hover .caret,  html.business #footer { 
 	background:#008841;
 }
 
@@ -406,7 +407,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 @media screen and (max-width:470px) {
 
-		html {  background-position: -256px 119px;  background-size: 167% auto; }
+	html.trucking, html.nursing, html.design, html.business { background-position: -256px 113px;  background-size: 167% auto; }
 
 }
 
@@ -418,7 +419,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 @media screen and (min-width: 470px) and (max-width: 768px) {
 
-		html { background-size: 110%; background-position: center 112px }
+	html.trucking, html.nursing, html.design, html.business  { background-size: 110%; background-position: center 112px }
 
 }
 
@@ -560,8 +561,8 @@ li.hidden-xs.gap { margin-left: 160px }
 
 @media screen and (min-width: 768px) and (max-width:1130px) {
 
-	 html{
-		background: url('../img/glasses.jpg') no-repeat right 90px scroll;
+	 html.trucking, html.nursing, html.design, html.business  {
+		background-position: right 90px;
 		background-size: 138%;
 	}
 	.headline {
