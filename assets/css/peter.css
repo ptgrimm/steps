@@ -383,9 +383,6 @@ html.nursing #learning-header .nav-pills>li>a:hover, html.nursing .color, html.n
 	margin-top:50px;
 }
 
-.gray-bg {
-	background:#f5f5f5
-}
 
 div.title:first-child { margin-top: 0; }
 
@@ -486,7 +483,7 @@ li.hidden-xs.gap { margin-left: 160px }
 	}
 
 	.img-responsive {
-		background: rgba(25, 25, 25, 0.25);
+		/*background: rgba(25, 25, 25, 0.25); */
 		padding: 10px 0;
 	}
 
@@ -619,33 +616,15 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
+@media screen and (min-width: 990px) {
+	.gray-bg {
+ 		 background: #f5f5f5; 
+	}
 	.content-with-bg{
 		background:url('../img/gray.png') no-repeat 940px 45px scroll;
 		background-color: white;
 	}
-
-
-/*
-
-.spacer {
-    margin-top: 150px; /* define margin as you see fit 
-}
-@media screen and (max-width:768px) and (min-width:290px)  {
-
-	.spacer { margin-top: 10px; }
-
-}
-
-@media screen and (max-width:1280px) and (min-width:1000px)  {
-
-	.spacer { margin-top: 65px; }
-
 }
 
 
-@media screen and (max-width:1350px) and (min-width:1280px)  {
 
-	.spacer { margin-top: 100px; }
-
-}
-*/
