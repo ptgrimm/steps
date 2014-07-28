@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="design" lang="en" dir="ltr">
+
+<head>
+<meta charset="utf-8" />
+<title>Campus Steps</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href='//www.campusexplorer.com/css/combine/css/fonts/avenirnext/avenirnext.css,/css/fonts/museoslab1000/museoslab1000.css' rel='stylesheet' type='text/css'>
+<!-- <link rel="stylesheet" type="text/css" href="assets/css/clearsteps.css" /> -->
+<link rel="stylesheet" type="text/css" href="assets/css/peter.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/footer.css" />
+<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	$(".guest_prohibited").click(function (e) {
+		e.preventDefault;
+		return false;
+	});
+
+	$(function() {
+      $("#id_school").autocomplete({
+        source: function(request, response){
+             $.getJSON("/schools/search/",
+                {
+                    term: request.term,
+                    state: $('#id_state').val(),
+                },
+                response );
+            },
+        minLength: 2,
+        create: function(event, ui) {
+          $(".ui-autocomplete").wrap("<div style=\"z-index:1000;\" class=\"jquery-ui-smoothness\"></div>");
+        },
+        select: function( event, ui ) {
+            $( "#id_school_id" ).val( ui.item.id );
+        }
+      });
+    });
+
+// Scroll down on click
+    $("#learn").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $("#learn-anchor").offset().top
+	    }, 1000);
+	});
+
+});
+</script>
+  
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/modernizr.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="homepage responsive">
+
+<!-- Thin Campus Steps/Explorer Jobs nav -->
+<div id="learning-header" class="group">
+	<div class="container">
+		<ul class="nav nav-pills pull-right">
+   			<li><a href="#">Campus Steps</a></li>
+  			<li><a href="#">Campus Explorer</a></li>
+			<li class="active"><a href="#">Job Steps</a></li>
+   		</ul>
+	</div>
+</div>
+
+<!-- Main Nav -->
+<nav class="navbar color" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="cs-brand" href="/">
+		<img src="assets/img/design-logo.png" alt="Campus Steps">
+	  </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+        <ul class="subjects nav nav-pills pull-left">
+	        <li class="dropdown">
+	            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Graphic Design <b class="caret"></b></a>
+	            <ul class="dropdown-menu">
+	                <li><a href="#">Industrial Design</a></li>
+	                <li><a href="#">Web Development</a></li>
+	                <li><a href="#">Photography</a></li>
+	                <li><a href="#">Architecture</a></li>
+	                <li><a href="#">Fashion Design</a></li>
+	            </ul>
+	        </li>    
+	        <li class="span hidden-xs">In:</li>
+	        <li class="dropdown">
+	            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Los Angeles <span class="hidden-xs">& Vicinity</span><b class="caret"></b></a>
+	            <ul class="dropdown-menu">
+	                <li><a href="#">Industrial Design</a></li>
+	                <li><a href="#">Web Development</a></li>
+	                <li><a href="#">Photography</a></li>
+	                <li><a href="#">Architecture</a></li>
+	                <li><a href="#">Fashion Design</a></li>
+	            </ul>
+	        </li>
+		</ul>
+     
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      	<ul class="nav navbar-nav navbar-right" id="sign-in-up-nav">
+	      		<li class="hidden-xs gap"><a href="#">1-800-234-5555</a></li>
+				<li class="signup-link"><a href="/accounts/signup/">Join FREE</a></li>
+				<li class="hidden-xs"><span class="seperator">|</span></li>
+				<li class="login-link"><a href="/accounts/login/">Sign In</a></li>
+	        </ul>
+    	</div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<!-- Content -->
+	<div id="content-wrapper" class="group">     
+	    <div class="container">   
+	        <div class="row">
+	            <div class="content-column">
+	                <div id="content">
+	                    <div class="headline">Find the right Graphic Design schools in Los Angeles & Vicinity</div>
+	                  
+	                    <div class="school-finder">
+	                        <h3>Save time with the STEPS 1-and-done school finder</h3>
+	                     
+	                        <form action="." method="post" class="form-inline">
+     
+								<div id="div_id_user_type" class="form-group">
+									<label for="exampleInputEmail1">Choose an area of study</label>
+									<div class="controls half-size">
+										<select class="select form-control" id="id_user_type" name="user_type">
+											<option value="Student">Art / Fashion / Design</option>
+											<option value="Counselor">Computer Science</option>
+											<option value="Student">Creative Writing</option>
+											<option value="Counselor">Theatre Arts / Acting</option>
+										</select>
+									</div>
+								</div>
+								<div id="div_id_concentration" class="form-group">
+									<label for="exampleInputEmail1">Choose a concentration</label>
+									<div class="controls half-size">
+										<select class="select form-control" id="id_user_type" name="user_type">
+											<option value="Student">Bachelor's</option>
+											<option value="Counselor">Architecture</option>
+											<option value="Student">Photography</option>
+											<option value="Counselor">Industrial Design</option>
+										</select>
+									</div>
+								</div>
+								<div id="div_id_education" class="form-group">
+									<label for="exampleInputEmail1">Highest Level of Education</label>
+									<div class="controls half-size">
+										<select class="select form-control" id="id_user_type" name="user_type">
+											<option value="Student">- Select One -</option>
+											<option value="Student">Bachelor's</option>
+											<option value="Counselor">Architecture</option>
+											<option value="Student">Photography</option>
+											<option value="Counselor">Industrial Design</option>
+										</select>
+									</div>
+								</div>
+								<div id="div_id_grad_year" class="form-group">
+									<label for="exampleInputEmail1">H.S Graduation Year</label>
+									<div class="controls half-size">
+										<select class="select form-control" id="id_user_type" name="user_type">
+											<option value="1986">1986</option>
+											<option value="1987">1987</option>
+											<option value="1988">1988</option>
+											<option value="1989">1989</option>
+											<option value="Counselor">1990</option>
+											<option value="Counselor">1991</option>
+											<option value="Counselor">1992</option>
+											<option value="Counselor">1993</option>
+											<option value="Counselor">1994</option>
+										</select>
+									</div>
+								</div>
+								<div id="div_id_education" class="form-group">
+									<label for="exampleInputEmail1">Learning Preference</label>
+									<div class="controls half-size">
+										<select class="select form-control" id="id_user_type" name="user_type">
+											<option value="Student">- Select One -</option>
+											<option value="Counselor">Architecture</option>
+											<option value="Student">Photography</option>
+											<option value="Counselor">Industrial Design</option>
+										</select>
+									</div>
+								</div>
+								<div id="div_id_grad_year" class="form-group">
+									<label for="exampleInputEmail1">Zip</label>
+									<div class="controls half-size">
+										<input class="form-control" id="id_user_type" name="user_type">
+									</div>
+								</div>
+								<br/>
+	                            <button class="btn btn-action" type="submit">FIND NOW</button>
+	                        </form>
+	                    </div>
+	                    
+
+	                </div><!-- /#content -->
+	            </div><!-- /.content-column -->
+	        </div><!-- /.row -->
+	    </div><!--container -->
+	</div><!--contentwrapper-->
+
+	<div class="trans">
+		<div class="steps-wrapper">
+			    <a class="chevron" id="learn">
+			        <div class="inside">
+			        	<div class="big-number">1</div>
+				           <div class="step-title">LEARN</div>
+				           <div class="step-text"><div class="b">STEPS PROGRAM</div>
+				           	Videos, articles, quizzes, & market data
+				           </div>
+			        </div>
+			    </a>
+		    	<a id="find" class="chevron">
+			         <div class="inside"><div class="big-number">2</div>
+				           <div class="step-title">FIND</div>
+				           <div class="step-text"><div class="b">SCHOOL LISTINGS</div>
+				           	Find an affordable program near you
+				           </div>
+			        </div>
+		  		</a>
+		    	<a id="apply" class="chevron">
+			         <div class="inside"><div class="big-number">3</div>
+				           <div class="step-title">APPLY</div>
+				           <div class="step-text"><div class="b">STEPS PROGRAM</div>
+				           	Apply to jobs easily with your saved info
+				           </div>
+			        </div>
+			    </a>
+		</div>
+	<!--<img src="assets/img/three-steps.png" class="img-responsive" alt="Campus Steps">-->
+	</div>
+	<div class="content-with-bg spacer" id="learn-anchor">
+	    <div class="container">
+	        <div class="row" >
+	        	<div class="col-md-8">
+		        		<div class="title">Overview</div>
+		        		<p>Graphic Designers work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
+	        			<div class="title">What it's like to be a Graphic Designer</div>
+	        			<p>Graphic Designers have a median annual wage of $63,750. The highest 10 percent earn more than $93,700, while the lowest 10 percent earn less than $43,970. The middle 50 percent earn between $52,520 and $77,970. The median annual wages of top employing ind. The median annual wages of top employing ind. Read more </p>
+	        		<img class="img-responsive" src="assets/img/salary.png"/>
+	        			<div class="title">Earnings and Salary for Graphic Designers in Los Angeles & Vicinity</div>
+	        			<p>Registered nurses (RNs) work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
+	        		<img class="img-responsive" src="assets/img/jobs.png"/>
+	        			<div class="title">Employment Outlook for Graphic Designers in Los Angeles & Vicinity</div>
+	        			<p>Graphic Designers have a median annual wage of $63,750. The highest 10 percent earn more than $93,700, while the lowest 10 percent earn less than $43,970. The middle 50 percent earn between $52,520 and $77,970. The median annual wages of top employing ind. The median annual wages of top employing ind. Read more </p>
+	        		<img class="img-responsive" src="assets/img/ed-level.png"/>
+	        	</div>
+  				<div class="col-md-4">
+  					<img class="img-responsive" src="assets/img/map.png"/>
+  					<div class="gray-bg">
+  						<img class="img-responsive" src="assets/img/sidebar-content.jpg"/>
+  					</div>
+  				</div>
+			</div> <!--row-->
+	    </div><!-- /.container -->
+	</div>
+
+
+	<footer id="footer">
+		<div class="container">
+			<div clas="row">
+			<div class="col-xs-12 col-md-9 clearfix">
+			    <nav>
+			        <ul>
+			        	<li><a href="/faq/">HELP</a></li>
+			        	
+				        	<li><span class="seperator">|</span></li>
+				        	<li><a href="/company/">COMPANY</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/board-of-directors/">BOARD</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/contact/">CONTACT</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/press/">PRESS </a></li>
+
+				        	<li><span class="seperator">|</span></li>
+				        	<li><a href="/job-postings/">JOBS</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/terms/">TERMS</a>
+		        		
+				        	</li><li><span class="seperator">|</span></li>
+				        	<li><a href="/privacy/">PRIVACY</a>
+		        		
+			        </li></ul>
+			    </nav>
+			</div>
+			
+			<div class="col-xs-12 col-md-3">
+			    <ul class="social-sites">
+			    	<li><a href="#"><img src="//clearsteps.s3.amazonaws.com/images/footer-twitter-icon.png" alt="Twitter"></a></li>
+			    	<li><a href="#"><img src="//clearsteps.s3.amazonaws.com/images/footer-facebook-icon.png" alt="Facebook"></a></li>
+			    	<li><a href="#"><img src="//clearsteps.s3.amazonaws.com/images/footer-g-plus-icon.png" alt="Google+"></a></li>
+			    </ul>
+			</div>
+			</div><!-- /.row -->
+
+			<div class="row">
+				<div class="col-md-4"><img src="assets/img/jobsteps.png" alt="Twitter"></a></div>
+				<div class="col-md-4"><img src="assets/img/campusexplorer.png" alt="Twitter"></a></div>
+				<div class="col-md-4"><img src="assets/img/careersteps.png" alt="Twitter"></a></div>
+			</div>
+
+			<div class="row">
+			    <div class="col-sm-3 col-md-3">
+					<ul class="steps-links">
+						<li><a href="index.html">DESIGN STEPS</a></li>
+						<li><a href="nursing.html">NURSING STEPS</a></li>
+						<li><a href="trucking.html">TRUCKING STEPS</a></li>
+						<li><a href="business.html">BUSINESS STEPS</a></li>
+					</ul>
+				</div>
+			</div>
+
+		<span class="legal">© 2014 CampusSteps</p>
+			
+		</div><!-- /.container -->
+	</footer>
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/clearsteps.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/shared.js?v=6"></script>
+
+
+</body>
+</html>
