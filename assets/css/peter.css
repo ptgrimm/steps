@@ -130,7 +130,8 @@ html.nursing #learning-header .nav-pills>li>a:hover, html.nursing .color, html.n
 #sign-in-up-nav li a, #sign-in-up-nav li{
 	line-height: 58px;
   	color: #fff;
-  	padding: 0 6px
+  	padding: 0 6px;
+  	text-align: center;
 }
 
 #sign-in-up-nav > li > a:hover, #sign-in-up-nav > li > a:focus{
