@@ -1,11 +1,3 @@
-#map{
-  height: 100%;
-  margin: 0;
-}
-html, body {
-  height: 100%;
-  margin: 0;
-}
 
 /* Career type  */
 html.design {
@@ -404,13 +396,15 @@ div.title:first-child { margin-top: 0; }
 li.hidden-xs.gap { margin-left: 160px }
 
 
+/* Google maps */ 
+#map{
+  height: 60%;
+  margin: 0;
+}
 
 
 
-
-
-
-/* Media Queries */
+/************************************    Media Queries   **************************************/
 
 
 

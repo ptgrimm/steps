@@ -52,16 +52,6 @@ $( document ).ready(function() {
 	    }, 1000);
 	});
 
-
-var mapOptions = {
-    center: new google.maps.LatLng(37.7831,-122.4039),
-    zoom: 12,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-};
-
-new google.maps.Map(document.getElementById('map'), mapOptions);
-
-
 });
 </script>
   
@@ -260,11 +250,15 @@ new google.maps.Map(document.getElementById('map'), mapOptions);
 		</div>
 	<!--<img src="assets/img/three-steps.png" class="img-responsive" alt="Campus Steps">-->
 	</div>
+
+	<div id="map"></div>
+
 	<div class="content-with-bg spacer" id="learn-anchor">
 	    <div class="container">
 	        <div class="row" >
 	        	<div class="col-md-8">
-					<div id="map"></div>
+	        		
+				
 		        		<div class="title">Overview</div>
 		        		<p>Graphic Designers work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
 	        			<div class="title">What it's like to be a Graphic Designer</div>
@@ -355,7 +349,18 @@ new google.maps.Map(document.getElementById('map'), mapOptions);
 
 <script type="text/javascript" src="{{ STATIC_URL }}js/clearsteps.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/shared.js?v=6"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
+<script type="text/javascript">
+var mapOptions = {
+    center: new google.maps.LatLng(34.052234, -118.243684),
+    zoom: 11,
+    scrollwheel: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+
+new google.maps.Map(document.getElementById('map'), mapOptions);
+</script>
 
 </body>
 </html>
