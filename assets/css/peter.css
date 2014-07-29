@@ -6,20 +6,20 @@ html.design {
 }
 
 html.trucking {
-	background: url('../img/trucking.jpg') no-repeat right -12% scroll;
-	background-size: 108%;
+	background: url('../img/trucking.jpg') no-repeat right 90px scroll;
+	background-size: 116%;
 	overflow-x: hidden;
 }
 
 html.business {
 	background: url('../img/business.jpg') no-repeat right 90px scroll;
-	background-size: 105%;
+	background-size: 116%;
 	overflow-x: hidden;
 }
 
 html.nursing {
 	background: url('../img/nursing.jpg') no-repeat right 90px scroll;
-	background-size: 100%;
+	background-size: 116%;
 	overflow-x: hidden;
 }
 
@@ -293,7 +293,7 @@ html.nursing #learning-header .nav-pills>li>a:hover, html.nursing .color, html.n
 	color: #404040;
 	z-index: 9999;
 	position: absolute;
-	font-size: 17px;
+	font-size: 16px;
 	margin-top: 6px;
 	padding-left: 9px;
 	text-align: left;
@@ -375,7 +375,10 @@ html.nursing #learning-header .nav-pills>li>a:hover, html.nursing .color, html.n
 
 
 /* Main Body */
-
+		
+.content-with-bg{ 
+	background-color: white;
+}
 
 .title { 
 	font-family: 'Avenir';
@@ -392,6 +395,10 @@ li.hidden-xs.gap { margin-left: 160px }
 
 
 
+
+
+
+
 /* Media Queries */
 
 
@@ -403,9 +410,11 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
-@media screen and (max-width:470px) {
+@media screen and (min-width:0px) and (max-width:470px) {
 
-	html.trucking, html.nursing, html.design, html.business { background-position: -256px 113px;  background-size: 167% auto; }
+	html.trucking, html.nursing, html.design, html.business  { background-size: 110%; background-position: center 112px }
+
+	.headline { font-size:27px; margin: 15px 0 45px 10px; }
 
 }
 
@@ -418,18 +427,6 @@ li.hidden-xs.gap { margin-left: 160px }
 @media screen and (min-width: 470px) and (max-width: 768px) {
 
 	html.trucking, html.nursing, html.design, html.business  { background-size: 110%; background-position: center 112px }
-
-}
-
-@media screen and (max-width: 768px) {
-
-	#learning-header { font-size:9px; }
-
-	#learning-header .nav-pills > li > a { border-radius: 0px; padding: 8px 6px; }
-
-	.homepage #content-wrapper .container .school-finder { margin-left:0; }
-
-	.spacer { margin-top: -70px; }
 
 	.headline {
 		margin-top: 15px;
@@ -446,6 +443,18 @@ li.hidden-xs.gap { margin-left: 160px }
 		letter-spacing: .8px;
 		max-width:90%
 	}
+
+}
+
+@media screen and (max-width: 768px) {
+
+	#learning-header { font-size:9px; }
+
+	#learning-header .nav-pills > li > a { border-radius: 0px; padding: 8px 6px; }
+
+	.homepage #content-wrapper .container .school-finder { margin-left:0; }
+
+	.spacer { margin-top: -70px; }
 
 	#sign-in-up-nav li a, #sign-in-up-nav li { line-height: 29px; }
 	
@@ -517,11 +526,11 @@ li.hidden-xs.gap { margin-left: 160px }
 		margin: 0 0px;
 	}
 	.step-text {
-		line-height: 22px;
-		max-width: 667px;
-		margin-top: 12px;
-		display: inline-block;
-		padding-left: 12px;
+	    display: block;
+	    line-height: 22px;
+	    margin-left: 64px;
+	    margin-top: 8px;
+	    max-width: 667px;
 	}
 	.big-number{ 
 		line-height: 50px;
@@ -535,7 +544,7 @@ li.hidden-xs.gap { margin-left: 160px }
 	.step-title {
 		font-size: 13px;
 		color: #23a3ab;
-		margin-top: -4px;
+		margin-top: 0px;
 		display:block;
 		height: 14px;
 		text-align: center;
@@ -598,12 +607,6 @@ li.hidden-xs.gap { margin-left: 160px }
 		width: 239px
 	}
 
-	.step-text {
-		line-height: 20px;
-		max-width: 247px;
-		margin-top: -3px;
-		font-size: 14px;
-	}
 
 }
 
@@ -617,16 +620,36 @@ li.hidden-xs.gap { margin-left: 160px }
 
 	}
 
-
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 990px) and (max-width: 1520px) {
 
 	.content-with-bg{
-		background:url('../img/gray.png') no-repeat 951px 45px scroll;
-		background-color: white;
+		background:url('../img/gray.png') no-repeat 968px 45px scroll #FFF;
 	}
+
 }
 
+@media screen and (min-width: 1520px) and (max-width:2180px) {
 
+	.content-with-bg{
+		background:url('../img/gray.png') no-repeat 1300px 45px scroll #FFF;
+	}
 
+}
+
+@media screen and (min-width:2180px) and (max-width:2800px) {
+
+	.content-with-bg{
+		background:url('../img/gray.png') no-repeat 1677px 45px scroll #FFF;
+	}
+
+}
+
+@media screen and (min-width:2800px) {
+
+	.content-with-bg{
+		background: #FFF;
+	}
+
+}
