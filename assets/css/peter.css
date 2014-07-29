@@ -1,3 +1,12 @@
+#map{
+  height: 100%;
+  margin: 0;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 /* Career type  */
 html.design {
 	background: url('../img/glasses.jpg') no-repeat right 90px scroll;
@@ -407,7 +416,9 @@ li.hidden-xs.gap { margin-left: 160px }
 
 @media screen and (min-width:0px) and (max-width:470px) {
 
-	html.trucking, html.nursing, html.design, html.business  { background-size: 110%; background-position: center 112px }
+	html.nursing, html.design, html.business  { background-size: 110%; background-position: center 112px }
+
+	html.trucking {	background: url('../img/trucking.jpg') no-repeat right 60px scroll; background-size: 100%; }
 
 	.headline { font-size:25px; margin: 15px 0 40px 10px; line-height:27px; }
 
@@ -609,7 +620,6 @@ li.hidden-xs.gap { margin-left: 160px }
 	.chevron{
 		width: 239px
 	}
-
 
 }
 
