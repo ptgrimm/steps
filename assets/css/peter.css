@@ -76,6 +76,7 @@ html.nursing #learning-header .nav-pills>li>a:hover, html.nursing .color, html.n
 .subjects.nav-pills > li > a:hover, .subjects.nav-pills > li > a:focus, .subjects.nav-pills a:hover .caret,
 .subjects.nav a .caret:hover {
 	color: white; 
+	background: transparent;
 	border-bottom-color: white; 
 	border-top-color: white; 
 	opacity: .75
@@ -403,19 +404,12 @@ li.hidden-xs.gap { margin-left: 160px }
 /* Media Queries */
 
 
-@media screen and (max-width:1100px) {
-
-	li.hidden-xs.gap {
-		display:none!important;
-	}
-
-}
 
 @media screen and (min-width:0px) and (max-width:470px) {
 
 	html.trucking, html.nursing, html.design, html.business  { background-size: 110%; background-position: center 112px }
 
-	.headline { font-size:27px; margin: 15px 0 45px 10px; }
+	.headline { font-size:25px; margin: 15px 0 40px 10px; line-height:27px; }
 
 }
 
@@ -594,6 +588,14 @@ li.hidden-xs.gap { margin-left: 160px }
 		float: left;
 		width: 50px;
 		padding-left: 3px;
+	}
+
+}
+
+@media screen and (max-width:1100px) {
+
+	li.hidden-xs.gap {
+		display:none!important;
 	}
 
 }
