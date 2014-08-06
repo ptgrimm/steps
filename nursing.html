@@ -245,6 +245,9 @@ $( document ).ready(function() {
 		</div>
 	<!--<img src="assets/img/three-steps.png" class="img-responsive" alt="Campus Steps">-->
 	</div>
+
+	<div id="map"></div>
+
 	<div class="content-with-bg spacer" id="learn-anchor">
 	    <div class="container">
 	        <div class="row" >
@@ -339,6 +342,16 @@ $( document ).ready(function() {
 <script type="text/javascript" src="{{ STATIC_URL }}js/clearsteps.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/shared.js?v=6"></script>
 
+<script type="text/javascript">
+var mapOptions = {
+    center: new google.maps.LatLng(34.052234, -118.243684),
+    zoom: 11,
+    scrollwheel: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+
+new google.maps.Map(document.getElementById('map'), mapOptions);
+</script>
 
 </body>
 </html>
