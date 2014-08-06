@@ -28,10 +28,37 @@ body{ background-color:transparent!important; }
 
 select { -moz-appearance: window; }
 
+a:hover { text-decoration: none!important}
+
+/* Sticky header */
+
+header {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 60px;
+    background: #333;
+    z-index: 99999
+}
+
+.sticky a {
+	text-align: center;
+	color: #ececec;
+	height: 60px;
+	line-height: 52px;
+	font-family: 'avenir';
+	font-size: 22px;
+	font-weight: 500;
+	border-top:8px solid transparent;
+	position: absolute;
+	width: 100%
+}
+
+.sticky a:hover { cursor:pointer; color:white; background: #222}
 
 /* Top Learning Header */
 
-#learning-header { font-family: 'avenir'; font-size:12px; text-transform: uppercase; font-weight:600; background: #000; }
+#learning-header { font-family: 'avenir'; font-size:12px; text-transform: uppercase; font-weight:600; background: #333; }
 
 #learning-header a { color:white; }
 
@@ -40,35 +67,49 @@ select { -moz-appearance: window; }
 #learning-header .nav-pills>li+li { margin: 0px; }
 
 
-/** Page-wide colors **/
+/* * *   Page-wide colors   * * */
 
-/*  Business  */
+/*  		Business		  */
 html.business nav li.hidden-xs a:hover, html.business #learning-header .nav-pills>li.active>a, .nav-pills>li.active>a:focus li:active, 
 html.business #learning-header .nav-pills>li>a:hover, html.business .color, html.trucking .subjects.nav-pills > li > a:hover, 
 .subjects.nav-pills > li > a:focus, .subjects.nav-pills a:hover .caret,  html.business #footer { 
 	background:#008841;
 }
 
-/*  Trucking  */
+html.business .sticky a.selected, html.business .sticky a:hover { border-top: 8px solid #008841; }
+
+
+/*  		Trucking		  */
 html.trucking nav li.hidden-xs a:hover, html.trucking #learning-header .nav-pills>li.active>a, .nav-pills>li.active>a:focus li:active, 
 html.trucking #learning-header .nav-pills>li>a:hover, html.trucking .color, html.trucking .subjects.nav-pills > li > a:hover, 
 .subjects.nav-pills > li > a:focus, .subjects.nav-pills a:hover .caret, html.trucking #footer{ 
 	background:#7a3129;
 }
 
-/*  Design  */
+html.trucking .sticky a.selected, html.trucking .sticky a:hover  { border-top: 8px solid #7a3129; }
+
+
+/*  		Design  		*/
 html.design nav li.hidden-xs a:hover, html.design #learning-header .nav-pills>li.active>a, .nav-pills>li.active>a:focus li:active, 
 html.design #learning-header .nav-pills>li>a:hover, html.design .color, html.design .subjects.nav-pills > li > a:hover, 
 .subjects.nav-pills > li > a:focus, .subjects.nav-pills a:hover .caret, html.design #footer { 
 	background:#3ea8af;
 }
 
-/*  Nursing  */
+html.design .sticky a.selected, html.design .sticky a:hover  { border-top: 8px solid #3ea8af; }
+
+
+/* 			 Nursing 		 */
 html.nursing nav li.hidden-xs a:hover, html.nursing #learning-header .nav-pills>li.active>a, .nav-pills>li.active>a:focus li:active, 
 html.nursing #learning-header .nav-pills>li>a:hover, html.nursing .color, html.nursing .subjects.nav-pills > li > a:hover, 
 .subjects.nav-pills > li > a:focus, .subjects.nav-pills a:hover .caret, html.nursing #footer { 
 	background:#28ADEA;
 }
+
+html.nursing .sticky a.selected, html.nursing .sticky a:hover  { border-top: 8px solid #28ADEA; }
+
+
+
 
 .nav .open>a, .nav .open>a:hover, .nav .open>a:focus, .nav>li>a:hover, .nav>li>a:focus {
 	background-color: transparent !important;
@@ -396,13 +437,32 @@ div.title:first-child { margin-top: 0; }
 li.hidden-xs.gap { margin-left: 160px }
 
 
-/* Google maps */ 
+/** Google maps **/ 
+
 #map{
-  height: 60%;
-  margin: 0;
+ 	height: 60%;
+  	margin: 0;
 }
 
+#map_wrapper {
+    height: 600px;
+}
 
+#map_canvas {
+    width: 100%;
+    height: 100%;
+}
+.info_content { width: 270px; overflow:hidden; font-family: 'Avenir' }
+.info_content img {
+    float: left;
+    max-width: 90px;
+    margin-right: 9px;
+    margin-top: -10px;
+}
+.info_content p {
+    margin: 0;    
+    font-family: 'Avenir'
+}
 
 /************************************    Media Queries   **************************************/
 
