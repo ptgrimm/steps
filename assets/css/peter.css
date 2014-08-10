@@ -30,6 +30,7 @@ select { -moz-appearance: window; }
 
 a:hover { text-decoration: none!important}
 
+
 /* Sticky header */
 
 header {
@@ -41,6 +42,16 @@ header {
     z-index: 99999
 }
 
+.sticky { text-align: center }
+
+.sticky table { margin: 0 auto 16px; max-width: 400px }
+
+.sticky .table>tbody>tr>td { border-top:none; padding:0; }
+
+.sticky td a { width: 7em; }
+
+.sticky-sign-up { position:absolute; right:19px; top:0px; padding:0 10px;}
+
 .sticky a {
 	text-align: center;
 	color: #ececec;
@@ -50,11 +61,11 @@ header {
 	font-size: 19px;
 	font-weight: 400;
 	border-top: 4px solid transparent;
-	width: 110px;
 	display: inline-block;
 }
 
 .sticky a:hover { cursor:pointer; color:white; background: #222}
+
 
 /* Top Learning Header */
 
@@ -107,6 +118,9 @@ html.nursing #learning-header .nav-pills>li>a:hover, html.nursing .color, html.n
 }
 
 html.nursing .sticky a.selected, html.nursing .sticky a:hover  { border-color: #28ADEA; }
+
+
+/* * * * *  end of page-wide  * * * */
 
 
 
@@ -478,11 +492,13 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
+
 @media screen and (min-width: 470px) {
 
 		.dropdown-toggle .hidden-xs { display: inline-block !important; }
 
 }
+
 
 @media screen and (min-width: 470px) and (max-width: 768px) {
 
@@ -506,7 +522,10 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
+
 @media screen and (max-width: 768px) {
+
+	#map_wrapper { height:170px; }
 
 	#learning-header { font-size:9px; }
 
@@ -514,7 +533,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 	.homepage #content-wrapper .container .school-finder { margin-left:0; }
 
-	.spacer { margin-top: -70px; }
+	.spacer { margin-top: -14px; }
 
 	#sign-in-up-nav li a, #sign-in-up-nav li { line-height: 29px; }
 	
@@ -549,7 +568,7 @@ li.hidden-xs.gap { margin-left: 160px }
 	
 	.trans {
 		display: block;
-		margin: 0px 0 37px;
+		margin: 0px 0 -6px;
 		padding: 0px 0;
 	}
 
@@ -629,6 +648,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
+
 @media screen and (min-width: 768px) and (max-width:1130px) {
 
 	 html.trucking, html.nursing, html.design, html.business  {
@@ -657,6 +677,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
+
 @media screen and (max-width:1100px) {
 
 	li.hidden-xs.gap {
@@ -664,6 +685,20 @@ li.hidden-xs.gap { margin-left: 160px }
 	}
 
 }
+
+
+@media screen and (max-width:768px) { 
+
+	.sticky table { margin: 0 auto 16px; max-width: 100px }
+
+	.sticky-sign-up { right:1px; padding:0 8px;}
+
+	.sticky a { font-size:14px; }
+	
+	.sticky td a { width: 3.7em; }
+
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 980px) {
 	
@@ -677,6 +712,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
+
 @media screen and (min-width: 1000px) {
 
 	.subjects.nav.nav-pills.pull-left { margin-left: 40px }
@@ -689,6 +725,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
+
 @media screen and (min-width: 990px) and (max-width: 1520px) {
 
 	.content-with-bg{
@@ -696,6 +733,7 @@ li.hidden-xs.gap { margin-left: 160px }
 	}
 
 }
+
 
 @media screen and (min-width: 1520px) and (max-width:2180px) {
 
@@ -705,6 +743,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
+
 @media screen and (min-width:2180px) and (max-width:2800px) {
 
 	.content-with-bg{
@@ -712,6 +751,7 @@ li.hidden-xs.gap { margin-left: 160px }
 	}
 
 }
+
 
 @media screen and (min-width:2800px) {
 

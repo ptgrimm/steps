@@ -79,9 +79,16 @@ $(window).scroll(function () {
 <header style="display:none">
 	<div class="container">
 		<div class="row sticky">
-			<div class="col-xs-6 col-sm-4"></div>
-			<div class="col-xs-6 col-sm-4"><a class="selected">LEARN</a><a class="">FIND</a><a class="">APPLY</a></div>
-			<div class="col-xs-6 col-sm-4"><a href="/accounts/signup/" style="float:right">Join FREE</a></div>
+			<table class="table">
+		      <tbody>
+		        <tr>
+		          <td><a class="selected">LEARN</a></td>
+		          <td><a class="">FIND</a></td>
+		          <td><a class="">APPLY</a></td>
+		        </tr>     
+		      </tbody>
+		    </table>
+		    <a href="/accounts/signup/" class="sticky-sign-up">Join FREE</a>
 		</div>
 	</div>
 </header>
@@ -380,11 +387,10 @@ function initialize() {
     var mapOptions = {
         mapTypeId: 'roadmap',
         scrollwheel: false,
-        draggable: false
     };
 
     //Add touch events for mobile use..
-    
+
 var dragFlag = false;
 var start = 0, end = 0;
 
