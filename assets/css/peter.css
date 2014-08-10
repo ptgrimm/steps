@@ -36,7 +36,7 @@ header {
     position: fixed;
     display: none;
     width: 100%;
-    height: 60px;
+    height: 48px;
     background: #333;
     z-index: 99999
 }
@@ -44,14 +44,14 @@ header {
 .sticky a {
 	text-align: center;
 	color: #ececec;
-	height: 60px;
-	line-height: 52px;
+	height: 47px;
+	line-height: 45px;
 	font-family: 'avenir';
-	font-size: 22px;
-	font-weight: 500;
-	border-top:8px solid transparent;
-	position: absolute;
-	width: 100%
+	font-size: 19px;
+	font-weight: 400;
+	border-top: 4px solid transparent;
+	width: 110px;
+	display: inline-block;
 }
 
 .sticky a:hover { cursor:pointer; color:white; background: #222}
@@ -76,7 +76,7 @@ html.business #learning-header .nav-pills>li>a:hover, html.business .color, html
 	background:#008841;
 }
 
-html.business .sticky a.selected, html.business .sticky a:hover { border-top: 8px solid #008841; }
+html.business .sticky a.selected, html.business .sticky a:hover { border-color: #008841; }
 
 
 /*  		Trucking		  */
@@ -86,7 +86,7 @@ html.trucking #learning-header .nav-pills>li>a:hover, html.trucking .color, html
 	background:#7a3129;
 }
 
-html.trucking .sticky a.selected, html.trucking .sticky a:hover  { border-top: 8px solid #7a3129; }
+html.trucking .sticky a.selected, html.trucking .sticky a:hover  { border-color: #7a3129; }
 
 
 /*  		Design  		*/
@@ -96,7 +96,7 @@ html.design #learning-header .nav-pills>li>a:hover, html.design .color, html.des
 	background:#3ea8af;
 }
 
-html.design .sticky a.selected, html.design .sticky a:hover  { border-top: 8px solid #3ea8af; }
+html.design .sticky a.selected, html.design .sticky a:hover  { border-color: #3ea8af; }
 
 
 /* 			 Nursing 		 */
@@ -106,7 +106,7 @@ html.nursing #learning-header .nav-pills>li>a:hover, html.nursing .color, html.n
 	background:#28ADEA;
 }
 
-html.nursing .sticky a.selected, html.nursing .sticky a:hover  { border-top: 8px solid #28ADEA; }
+html.nursing .sticky a.selected, html.nursing .sticky a:hover  { border-color: #28ADEA; }
 
 
 
@@ -445,7 +445,7 @@ li.hidden-xs.gap { margin-left: 160px }
 }
 
 #map_wrapper {
-    height: 600px;
+    height: 500px;
 }
 
 #map_canvas {

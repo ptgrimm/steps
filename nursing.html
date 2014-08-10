@@ -79,9 +79,9 @@ $(window).scroll(function () {
 <header style="display:none">
 	<div class="container">
 		<div class="row sticky">
-			<div class="col-xs-6 col-sm-4"><a class="selected">LEARN</a></div>
-			<div class="col-xs-6 col-sm-4"><a class="">FIND</a></div>
-			<div class="col-xs-6 col-sm-4"><a class="">APPLY</a></div>
+			<div class="col-xs-6 col-sm-4"></div>
+			<div class="col-xs-6 col-sm-4"><a class="selected">LEARN</a><a class="">FIND</a><a class="">APPLY</a></div>
+			<div class="col-xs-6 col-sm-4"><a href="/accounts/signup/" style="float:right">Join FREE</a></div>
 		</div>
 	</div>
 </header>
@@ -152,7 +152,7 @@ $(window).scroll(function () {
 	        <div class="row">
 	            <div class="content-column">
 	                <div id="content">
-	                    <div class="headline">Find the right Graphic Design schools in Los Angeles & Vicinity</div>
+	                    <div class="headline">Find the right Nursing schools in Los Angeles & Vicinity</div>
 	                  
 	                    <div class="school-finder">
 	                        <h3>Save time with the STEPS 1-and-done school finder</h3>
@@ -279,13 +279,13 @@ $(window).scroll(function () {
 	        	<div class="col-md-8">
 		        		<div class="title">Overview</div>
 		        		<p>Graphic Designers work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
-	        			<div class="title">What it's like to be a Graphic Designer</div>
+	        			<div class="title">What it's like to be a Nurse</div>
 	        			<p>Graphic Designers have a median annual wage of $63,750. The highest 10 percent earn more than $93,700, while the lowest 10 percent earn less than $43,970. The middle 50 percent earn between $52,520 and $77,970. The median annual wages of top employing ind. The median annual wages of top employing ind. Read more </p>
 	        		<img class="img-responsive" src="assets/img/salary.png"/>
-	        			<div class="title">Earnings and Salary for Graphic Designers in Los Angeles & Vicinity</div>
+	        			<div class="title">Earnings and Salary for Nurses in Los Angeles & Vicinity</div>
 	        			<p>Registered nurses (RNs) work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
 	        		<img class="img-responsive" src="assets/img/jobs.png"/>
-	        			<div class="title">Employment Outlook for Graphic Designers in Los Angeles & Vicinity</div>
+	        			<div class="title">Employment Outlook for Nurses in Los Angeles & Vicinity</div>
 	        			<p>Graphic Designers have a median annual wage of $63,750. The highest 10 percent earn more than $93,700, while the lowest 10 percent earn less than $43,970. The middle 50 percent earn between $52,520 and $77,970. The median annual wages of top employing ind. The median annual wages of top employing ind. Read more </p>
 	        		<img class="img-responsive" src="assets/img/ed-level.png"/>
 	        	</div>
@@ -380,7 +380,35 @@ function initialize() {
     var mapOptions = {
         mapTypeId: 'roadmap',
         scrollwheel: false,
+        draggable: false
     };
+
+    //Add touch events for mobile use..
+    
+var dragFlag = false;
+var start = 0, end = 0;
+
+function thisTouchStart(e)
+{
+    dragFlag = true;
+    start = e.touches[0].pageY; 
+}
+
+function thisTouchEnd()
+{
+    dragFlag = false;
+}
+
+function thisTouchMove(e)
+{
+    if ( !dragFlag ) return;
+    end = e.touches[0].pageY;
+    window.scrollBy( 0,( start - end ) );
+}
+
+document.getElementById("map_canvas").addEventListener("touchstart", thisTouchStart, true);
+document.getElementById("map_canvas").addEventListener("touchend", thisTouchEnd, true);
+document.getElementById("map_canvas").addEventListener("touchmove", thisTouchMove, true);
                     
     // Display a map on the page
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
@@ -390,9 +418,13 @@ function initialize() {
     var markers = [
         ['Everest College, Alhambra', 34.0745, -118.1465],
         ['ITT Technical Institute, Culver City', 33.9886, -118.3988],
-        ['Paul Mitchell the School, Costa Mesa', 33.6791, -117.9087]
+        ['Paul Mitchell the School, Costa Mesa', 33.6791, -117.9087],
+        ['Woodbury University, Burbank', 34.1766, -118.348],
+        ['UEI College, Gardena', 33.8912, -118.2972]
     ];
                         
+
+
 
     // Info Window Content
     var infoWindowContent = [
@@ -405,13 +437,12 @@ function initialize() {
         ['<div class="info_content">' +
         '<h3>Paul Mitchell the School, Costa Mesa</h3>' + '<img src="http://www.campusexplorer.com/media/125x94/Paul-Mitchell-the-School-Costa-Mesa-66E0DAB0.jpg">' +
         '<p>3309 Hyland Ave., Suite J</p><p>Costa Mesa</p>' +  '</div>'],
-        ['<div class="info_content">' +
-        '<h3>London Eye</h3>' +
-        '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' +        '</div>'],
-        ['<div class="info_content">' +
-        '<h3>Palace of Westminster</h3>' +
-        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
-        '</div>']
+        ['<div class="info_content">' + 
+        '<h3>Woodbury University, Burbank</h3>' + ' <img src="http://www.campusexplorer.com/media/125x94/Woodbury-University-Burbank-63332975.jpg"> ' +
+        '<p>7500 Glenoaks Blvd.</p><p>Burbank</p>' + '</div>'],
+        ['<div class="info_content">' + 
+        '<h3>UEI College, Gardena</h3>' + ' <img src="http://www.campusexplorer.com/media/125x94/UEI-College-Gardena-99919AE7.jpg"> ' +
+        '<p>661 W. Redondo Beach Blvd.</p><p>Alhambra</p>' + '</div>']
     ];
         
     // Display multiple markers on a map
@@ -449,11 +480,11 @@ function initialize() {
     });
 
     var image = {
-  url: place.icon,
-  size: new google.maps.Size(71, 71),
-  origin: new google.maps.Point(0, 0),
-  anchor: new google.maps.Point(17, 34),
-  scaledSize: new google.maps.Size(25, 25)
+		  url: place.icon,
+		  size: new google.maps.Size(71, 71),
+		  origin: new google.maps.Point(0, 0),
+		  anchor: new google.maps.Point(17, 34),
+		  scaledSize: new google.maps.Size(25, 25)
   };
     
 }
