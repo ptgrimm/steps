@@ -477,6 +477,10 @@ li.hidden-xs.gap { margin-left: 160px }
     margin: 0;    
     font-family: 'Avenir'
 }
+.gm-style .gm-style-iw { overflow: hidden!important; }
+
+.info_content h3 { font-size:20px; font-family: 'Avenir'; margin: 9px 0 14px; }
+
 
 /************************************    Media Queries   **************************************/
 
@@ -490,12 +494,20 @@ li.hidden-xs.gap { margin-left: 160px }
 
 	.headline { font-size:25px; margin: 15px 0 40px 10px; line-height:27px; }
 
+	header.open { display:none!important; }
+
+	.info_content { width: 220px; font-size: 11px}
+
+	.info_content h3 { font-size:13px; margin-top: 8px; }
+
+	.info_content img { width: 70px; padding-top:6px; margin-right: 6px } 
+
 }
 
 
 @media screen and (min-width: 470px) {
 
-		.dropdown-toggle .hidden-xs { display: inline-block !important; }
+	.dropdown-toggle .hidden-xs { display: inline-block !important; }
 
 }
 
@@ -525,7 +537,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 @media screen and (max-width: 768px) {
 
-	#map_wrapper { height:170px; }
+	#map_wrapper { height:220px; }
 
 	#learning-header { font-size:9px; }
 
@@ -584,10 +596,10 @@ li.hidden-xs.gap { margin-left: 160px }
 	}
 	.chevron {
 		width:100%;
-		border-bottom: 5px solid #333;
+		border-bottom: 2px solid #333;
 		margin:0;
-		height: 135px;
-		padding: 12px 12px 12px 3px
+		height: 130px;
+		padding: 5px 12px 12px 3px
 	}
 	.chevron:before, .chevron:after {
 	  -webkit-transform: none;
@@ -601,8 +613,9 @@ li.hidden-xs.gap { margin-left: 160px }
 	  height: 0;
 	  width: 0;
 	}
-	.steps-wrapper {
+	.trans .steps-wrapper {
 		margin: 0 0px;
+		background: #777
 	}
 	.step-text {
 	    display: block;
@@ -612,17 +625,17 @@ li.hidden-xs.gap { margin-left: 160px }
 	    max-width: 667px;
 	}
 	.big-number{ 
-		line-height: 50px;
-		font-size: 54px;
+		line-height: 42px;
+		font-size: 29px;
 		float: left;
 		width: 49px;
 		text-align: center;
 		padding-left: 0px;
-		padding-top: 11px;
+		padding-top: 18px;
 	}
 	.step-title {
-		font-size: 13px;
-		color: #23a3ab;
+		font-size: 12px;
+		color: #08EAF8;
 		margin-top: 0px;
 		display:block;
 		height: 14px;
@@ -631,7 +644,13 @@ li.hidden-xs.gap { margin-left: 160px }
 		}
 	.inside {
 		width: 100%;
+		color: white;
 		padding-left: 0
+	}
+	.inside .b {
+		font-size: 25px !important;
+		line-height: 34px;
+		font-weight: 600
 	}
 
 }
