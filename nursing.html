@@ -53,16 +53,16 @@ $( document ).ready(function() {
 	    }, 1000);
 	});
 
-// Sticky header show
-$(window).scroll(function () {
-  if ( $(this).scrollTop() > 890 && !$('header').hasClass('open') ) {
-    $('header').addClass('open');
-    $('header').slideDown();
-   } else if ( $(this).scrollTop() <= 890 ) {
-    $('header').removeClass('open');
-    $('header').slideUp();
-  }
-});
+	// Sticky header show
+	$(window).scroll(function () {
+	  if ( $(this).scrollTop() > 890 && !$('header').hasClass('open') ) {
+	    $('header').addClass('open');
+	    $('header').slideDown();
+	   } else if ( $(this).scrollTop() <= 890 ) {
+	    $('header').removeClass('open');
+	    $('header').slideUp();
+	  }
+	});
 
 });
 </script>

@@ -53,6 +53,17 @@ $( document ).ready(function() {
 	    }, 1000);
 	});
 
+	// Sticky header show
+	$(window).scroll(function () {
+	  if ( $(this).scrollTop() > 890 && !$('header').hasClass('open') ) {
+	    $('header').addClass('open');
+	    $('header').slideDown();
+	   } else if ( $(this).scrollTop() <= 890 ) {
+	    $('header').removeClass('open');
+	    $('header').slideUp();
+	  }
+	});
+
 });
 </script>
   
@@ -74,6 +85,24 @@ $( document ).ready(function() {
    		</ul>
 	</div>
 </div>
+
+<!-- Sticky header hidden -->
+<header style="display:none">
+	<div class="container">
+		<div class="row sticky">
+			<table class="table">
+		      <tbody>
+		        <tr>
+		          <td><a class="selected">LEARN</a></td>
+		          <td><a class="">FIND</a></td>
+		          <td><a class="">APPLY</a></td>
+		        </tr>     
+		      </tbody>
+		    </table>
+		    <a href="/accounts/signup/" class="sticky-sign-up">Join FREE</a>
+		</div>
+	</div>
+</header>
 
 <!-- Main Nav -->
 <nav class="navbar color" role="navigation">
