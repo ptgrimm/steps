@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="business" lang="en" dir="ltr">
+<html class="nursing" lang="en" dir="ltr">
 
 <head>
 <meta charset="utf-8" />
@@ -17,8 +17,9 @@
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-<script type="text/javascript">
+<script type="text/javascript"> 
 $( document ).ready(function() {
 	$(".guest_prohibited").click(function (e) {
 		e.preventDefault;
@@ -52,6 +53,17 @@ $( document ).ready(function() {
 	    }, 1000);
 	});
 
+// Sticky header show
+$(window).scroll(function () {
+  if ( $(this).scrollTop() > 890 && !$('header').hasClass('open') ) {
+    $('header').addClass('open');
+    $('header').slideDown();
+   } else if ( $(this).scrollTop() <= 890 ) {
+    $('header').removeClass('open');
+    $('header').slideUp();
+  }
+});
+
 });
 </script>
   
@@ -63,12 +75,30 @@ $( document ).ready(function() {
 
 <body class="homepage responsive">
 
+<!-- Sticky header hidden -->
+<header style="display:none">
+	<div class="container">
+		<div class="row sticky">
+			<table class="table">
+		      <tbody>
+		        <tr>
+		          <td><a class="selected">LEARN</a></td>
+		          <td><a class="">FIND</a></td>
+		          <td><a class="">APPLY</a></td>
+		        </tr>     
+		      </tbody>
+		    </table>
+		    <a href="/accounts/signup/" class="sticky-sign-up">Join FREE</a>
+		</div>
+	</div>
+</header>
+
 <!-- Thin Campus Steps/Explorer Jobs nav -->
 <div id="learning-header" class="group">
 	<div class="container">
 		<ul class="nav nav-pills pull-right">
    			<li><a href="#">Campus Steps</a></li>
-  			<li><a href="#">Campus Explorer</a></li>
+  			<li><a href="http://www.campusexplorer.com/">Campus Explorer</a></li>
 			<li class="active"><a href="#">Job Steps</a></li>
    		</ul>
 	</div>
@@ -86,19 +116,17 @@ $( document ).ready(function() {
         <span class="icon-bar"></span>
       </button>
       <a class="cs-brand" href="/">
-		<img src="assets/img/business-logo.png" alt="Campus Steps">
+		<img src="assets/img/nursing-logo.png" alt="Campus Steps">
 	  </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
         <ul class="subjects nav nav-pills pull-left">
 	        <li class="dropdown">
-	            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Business <b class="caret"></b></a>
+	            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Nursing <b class="caret"></b></a>
 	            <ul class="dropdown-menu">
-	                <li><a href="#">Property Management</a></li>
-	                <li><a href="#">Real Estate</a></li>
-	                <li><a href="#">Architecture</a></li>
-	                <li><a href="#">Contracting</a></li>
+	                <li><a href="#">Physician's Assistant</a></li>
+	                <li><a href="#">Medical Doctor</a></li>
 	            </ul>
 	        </li>    
 	        <li class="span hidden-xs">In:</li>
@@ -124,155 +152,8 @@ $( document ).ready(function() {
   </div><!-- /.container-fluid -->
 </nav>
 
-
-<!-- Content -->
-	<div id="content-wrapper" class="group">     
-	    <div class="container">   
-	        <div class="row">
-	            <div class="content-column">
-	                <div id="content">
-	                    <div class="headline">Find Property Management / Real Estate schools in Los Angeles & Vicinity</div>
-	                  
-	                    <div class="school-finder">
-	                        <h3>Save time with the STEPS 1-and-done school finder</h3>
-	                     
-	                        <form action="." method="post" class="form-inline">
-     
-								<div id="div_id_user_type" class="form-group">
-									<label for="exampleInputEmail1">Choose an area of study</label>
-									<div class="controls half-size">
-										<select class="select form-control" id="id_user_type" name="user_type">
-											<option value="Student">Business</option>
-											<option value="Counselor">Real Estate</option>
-											<option value="Student">Public Relations</option>
-										</select>
-									</div>
-								</div>
-								<div id="div_id_concentration" class="form-group">
-									<label for="exampleInputEmail1">Choose a concentration</label>
-									<div class="controls half-size">
-										<select class="select form-control" id="id_user_type" name="user_type">
-											<option value="Student">Real Estate</option>
-											<option value="Counselor">Architecture</option>
-											<option value="Counselor">Property Managementn</option>
-										</select>
-									</div>
-								</div>
-								<div id="div_id_education" class="form-group">
-									<label for="exampleInputEmail1">Highest Level of Education</label>
-									<div class="controls half-size">
-										<select class="select form-control" id="id_user_type" name="user_type">
-											<option value="Student">- Select One -</option>
-											<option value="Student">Bachelor's</option>
-											<option value="Counselor">Architecture</option>
-											<option value="Student">Photography</option>
-											<option value="Counselor">Industrial Design</option>
-										</select>
-									</div>
-								</div>
-								<div id="div_id_grad_year" class="form-group">
-									<label for="exampleInputEmail1">H.S Graduation Year</label>
-									<div class="controls half-size">
-										<select class="select form-control" id="id_user_type" name="user_type">
-											<option value="1986">1986</option>
-											<option value="1987">1987</option>
-											<option value="1988">1988</option>
-											<option value="1989">1989</option>
-											<option value="Counselor">1990</option>
-											<option value="Counselor">1991</option>
-											<option value="Counselor">1992</option>
-											<option value="Counselor">1993</option>
-											<option value="Counselor">1994</option>
-										</select>
-									</div>
-								</div>
-								<div id="div_id_education" class="form-group">
-									<label for="exampleInputEmail1">Learning Preference</label>
-									<div class="controls half-size">
-										<select class="select form-control" id="id_user_type" name="user_type">
-											<option value="Student">- Select One -</option>
-											<option value="Counselor">Architecture</option>
-											<option value="Student">Photography</option>
-											<option value="Counselor">Industrial Design</option>
-										</select>
-									</div>
-								</div>
-								<div id="div_id_grad_year" class="form-group">
-									<label for="exampleInputEmail1">Zip</label>
-									<div class="controls half-size">
-										<input class="form-control" id="id_user_type" name="user_type">
-									</div>
-								</div>
-								<br/>
-	                            <button class="btn btn-action" type="submit">FIND NOW</button>
-	                        </form>
-	                    </div>
-	                    
-
-	                </div><!-- /#content -->
-	            </div><!-- /.content-column -->
-	        </div><!-- /.row -->
-	    </div><!--container -->
-	</div><!--contentwrapper-->
-
-	<div class="trans">
-		<div class="steps-wrapper">
-			    <a class="chevron" id="learn">
-			        <div class="inside">
-			        	<div class="big-number">1</div>
-				           <div class="step-title">LEARN</div>
-				           <div class="step-text"><div class="b">STEPS PROGRAM</div>
-				           	Videos, articles, quizzes, & market data
-				           </div>
-			        </div>
-			    </a>
-		    	<a id="find" class="chevron">
-			         <div class="inside"><div class="big-number">2</div>
-				           <div class="step-title">FIND</div>
-				           <div class="step-text"><div class="b">SCHOOL LISTINGS</div>
-				           	Find an affordable program near you
-				           </div>
-			        </div>
-		  		</a>
-		    	<a id="apply" class="chevron">
-			         <div class="inside"><div class="big-number">3</div>
-				           <div class="step-title">APPLY</div>
-				           <div class="step-text"><div class="b">STEPS PROGRAM</div>
-				           	Apply to jobs easily with your saved info
-				           </div>
-			        </div>
-			    </a>
-		</div>
-	</div>
-
-	<div id="map_wrapper">
+	<div id="map_wrapper" style="height:100%">
     	<div id="map_canvas" class="mapping"></div>
-	</div>
-
-	<div class="content-with-bg spacer" id="learn-anchor">
-	    <div class="container">
-	        <div class="row" >
-	        	<div class="col-md-8">
-		        		<div class="title">Overview</div>
-		        		<p>Property Managers work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
-	        			<div class="title">What it's like to be a Property Manager</div>
-	        			<p>Graphic Designers have a median annual wage of $63,750. The highest 10 percent earn more than $93,700, while the lowest 10 percent earn less than $43,970. The middle 50 percent earn between $52,520 and $77,970. The median annual wages of top employing ind. The median annual wages of top employing ind. Read more </p>
-	        		<img class="img-responsive" src="assets/img/salary.png"/>
-	        			<div class="title">Earnings and Salary for Managers in Los Angeles & Vicinity</div>
-	        			<p>Registered nurses (RNs) work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
-	        		<img class="img-responsive" src="assets/img/jobs.png"/>
-	        			<div class="title">Employment Outlook for Managers in Los Angeles & Vicinity</div>
-	        			<p>Graphic Designers have a median annual wage of $63,750. The highest 10 percent earn more than $93,700, while the lowest 10 percent earn less than $43,970. The middle 50 percent earn between $52,520 and $77,970. The median annual wages of top employing ind. The median annual wages of top employing ind. Read more </p>
-	        		<img class="img-responsive" src="assets/img/ed-level.png"/>
-	        	</div>
-  				<div class="col-md-4">
-  					<img class="img-responsive" src="assets/img/map.png"/>
-  					<div class="gray-bg">
-  						<img class="img-responsive" src="assets/img/sidebar-content.jpg"/>
-  					</div>
-  				</div>
-			</div> <!--row-->
-	    </div><!-- /.container -->
 	</div>
 
 
@@ -358,7 +239,34 @@ function initialize() {
         mapTypeId: 'roadmap',
         scrollwheel: false,
     };
- 
+
+    //Add touch events for mobile use..
+/*
+var dragFlag = false;
+var start = 0, end = 0;
+
+function thisTouchStart(e)
+{
+    dragFlag = true;
+    start = e.touches[0].pageY; 
+}
+
+function thisTouchEnd()
+{
+    dragFlag = false;
+}
+
+function thisTouchMove(e)
+{
+    if ( !dragFlag ) return;
+    end = e.touches[0].pageY;
+    window.scrollBy( 0,( start - end ) );
+}
+
+document.getElementById("map_canvas").addEventListener("touchstart", thisTouchStart, true);
+document.getElementById("map_canvas").addEventListener("touchend", thisTouchEnd, true);
+document.getElementById("map_canvas").addEventListener("touchmove", thisTouchMove, true);
+        */    
                 
     // Display a map on the page
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
@@ -436,7 +344,7 @@ function initialize() {
         marker = new google.maps.Marker({
             position: position,
             map: map,
-             icon: iconBase + 'pin-green.svg',
+             icon: iconBase + 'pin.svg',
             title: markers[i][0]
         });
         

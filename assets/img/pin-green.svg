@@ -10,12 +10,12 @@
 <defs>
 </defs>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="17.2388" y1="0.9937" x2="2.8363" y2="36.6409">
-	<stop  offset="0" style="stop-color:#20C4F4"/>
-	<stop  offset="0.2106" style="stop-color:#0DC1F3"/>
-	<stop  offset="0.4231" style="stop-color:#00BBF0"/>
-	<stop  offset="0.6364" style="stop-color:#00B3EC"/>
-	<stop  offset="0.8491" style="stop-color:#00A9E7"/>
-	<stop  offset="1" style="stop-color:#00A1E4"/>
+	<stop  offset="0" style="stop-color:#62BB48"/>
+	<stop  offset="0.2106" style="stop-color:#5EB749"/>
+	<stop  offset="0.4231" style="stop-color:#51AE4B"/>
+	<stop  offset="0.6364" style="stop-color:#35A14D"/>
+	<stop  offset="0.8491" style="stop-color:#00904F"/>
+	<stop  offset="1" style="stop-color:#00824F"/>
 </linearGradient>
 <path fill="url(#SVGID_1_)" stroke="#1C3664" stroke-width="0.3" stroke-miterlimit="10" d="M23.271,5.909
 	c-1.036-1.619-2.397-2.993-4.156-4.022c-2.153-1.258-5.188-2.083-8.426-1.595C6.73,0.889,3.779,3.161,2.017,5.932

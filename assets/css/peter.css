@@ -78,7 +78,7 @@ header {
 #learning-header .nav-pills>li+li { margin: 0px; }
 
 
-/* * *   Page-wide colors   * * */
+/*  *  *   Page-wide colors   *  *  */
 
 /*  		Business		  */
 html.business nav li.hidden-xs a:hover, html.business #learning-header .nav-pills>li.active>a, .nav-pills>li.active>a:focus li:active, 

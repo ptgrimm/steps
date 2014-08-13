@@ -388,34 +388,7 @@ function initialize() {
         mapTypeId: 'roadmap',
         scrollwheel: false,
     };
-
-    //Add touch events for mobile use..
-/*
-var dragFlag = false;
-var start = 0, end = 0;
-
-function thisTouchStart(e)
-{
-    dragFlag = true;
-    start = e.touches[0].pageY; 
-}
-
-function thisTouchEnd()
-{
-    dragFlag = false;
-}
-
-function thisTouchMove(e)
-{
-    if ( !dragFlag ) return;
-    end = e.touches[0].pageY;
-    window.scrollBy( 0,( start - end ) );
-}
-
-document.getElementById("map_canvas").addEventListener("touchstart", thisTouchStart, true);
-document.getElementById("map_canvas").addEventListener("touchend", thisTouchEnd, true);
-document.getElementById("map_canvas").addEventListener("touchmove", thisTouchMove, true);
-        */    
+ 
                 
     // Display a map on the page
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
@@ -429,9 +402,13 @@ document.getElementById("map_canvas").addEventListener("touchmove", thisTouchMov
         ['Woodbury University, Burbank', 34.1766, -118.348],
         ['UEI College, Gardena', 33.8912, -118.2972],
         ['North-West College, Glendale', 34.1527, -118.2639],
-        ['California State University, Channel Islands', 34.1954, -119.0036]
+        ['California State University, Channel Islands', 34.1954, -119.0036],
+        ['Westwood College, Anaheim', 33.8393, -117.8708],
+        ['Universal College of Beauty, Campus #1', 33.9535, -118.2917],
+        ['Pepperdine University, Los Angeles', 33.9534, -118.3999],
+        ['West Coast University, Los Angeles', 34.1868, -118.3882],
+        ['Newbridge College, Long Beach', 33.7948, -118.1186]
     ];
-                        
 
 
 
@@ -457,9 +434,26 @@ document.getElementById("map_canvas").addEventListener("touchmove", thisTouchMov
 	    '<p>221 North Brand Boulevard, Lower Level</p><p>Glendale</p>' + '</div>'],
 	    ['<div class="info_content">' +
         '<h3>California State University, Channel Islands</h3>' + '<img src="http://www.campusexplorer.com/media/125x94/California-State-University-Channel-Islands-0D6BE67C.jpg">' +
-        '<p>One University Drive</p><p>Camarillo</p>' +  '</div>']
+        '<p>One University Drive</p><p>Camarillo</p>' +  '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Westwood College, Anaheim</h3>' + '<img src="http://www.campusexplorer.com/media/125x94/Westwood-College-Anaheim-389E9DBF.jpg">' +
+        '<p>1551 South Douglass Road</p><p>Anaheim</p>' +  '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Universal College of Beauty, Campus #1</h3>' + '<img src="http://www.campusexplorer.com/media/125x94/Universal-College-of-Beauty-Campus-1-633BB91A.jpg">' +
+        '<p>8619 S. Vermont Ave</p><p>Los Angeles</p>' +  '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Pepperdine University, Los Angeles</h3>' + '<img src="http://www.campusexplorer.com/media/125x94/Pepperdine-University-Los-Angeles-C941B1C4.jpg">' +
+        '<p>6100 Center Dr. #5</p><p>Los Angeles</p>' +  '</div>'],
+        ['<div class="info_content">' +
+        '<h3>West Coast University, Los Angeles</h3>' + '<img src="http://www.campusexplorer.com/media/125x94/West-Coast-University-Los-Angeles-9DB5212F.jpg">' +
+        '<p>12215 Victory Boulevard</p><p>Los Angeles</p>' +  '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Newbridge College, Long Beach</h3>' + '<img src="http://www.campusexplorer.com/media/125x94/Newbridge-College-Long-Beach-2A294A7C.jpg">' +
+        '<p>3799 E Burnett St.</p><p>Long Beach</p>' +  '</div>']
     ];
         
+
+
     // Display multiple markers on a map
     var infoWindow = new google.maps.InfoWindow(), marker, i;
     
