@@ -39,7 +39,8 @@ header {
     width: 100%;
     height: 48px;
     background: #333;
-    z-index: 99999
+    z-index: 99999;
+    top:0px;
 }
 
 .sticky { text-align: center }
