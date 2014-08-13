@@ -19,7 +19,7 @@
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-<script type="text/javascript">
+<script type="text/javascript"> 
 $( document ).ready(function() {
 	$(".guest_prohibited").click(function (e) {
 		e.preventDefault;
@@ -427,7 +427,9 @@ document.getElementById("map_canvas").addEventListener("touchmove", thisTouchMov
         ['ITT Technical Institute, Culver City', 33.9886, -118.3988],
         ['Paul Mitchell the School, Costa Mesa', 33.6791, -117.9087],
         ['Woodbury University, Burbank', 34.1766, -118.348],
-        ['UEI College, Gardena', 33.8912, -118.2972]
+        ['UEI College, Gardena', 33.8912, -118.2972],
+        ['North-West College, Glendale', 34.1527, -118.2639],
+        ['California State University, Channel Islands', 34.1954, -119.0036]
     ];
                         
 
@@ -449,7 +451,13 @@ document.getElementById("map_canvas").addEventListener("touchmove", thisTouchMov
         '<p>7500 Glenoaks Blvd.</p><p>Burbank</p>' + '</div>'],
         ['<div class="info_content">' + 
         '<h3>UEI College, Gardena</h3>' + ' <img src="http://www.campusexplorer.com/media/125x94/UEI-College-Gardena-99919AE7.jpg"> ' +
-        '<p>661 W. Redondo Beach Blvd.</p><p>Alhambra</p>' + '</div>']
+        '<p>661 W. Redondo Beach Blvd.</p><p>Alhambra</p>' + '</div>'],
+        ['<div class="info_content">' +
+	    '<h3>North-West College, Glendale</h3>' + '<img src="http://www.campusexplorer.com/media/125x94/North-West-College-Glendale-70127B0B.jpg">' +
+	    '<p>221 North Brand Boulevard, Lower Level</p><p>Glendale</p>' + '</div>'],
+	    ['<div class="info_content">' +
+        '<h3>California State University, Channel Islands</h3>' + '<img src="http://www.campusexplorer.com/media/125x94/California-State-University-Channel-Islands-0D6BE67C.jpg">' +
+        '<p>One University Drive</p><p>Camarillo</p>' +  '</div>']
     ];
         
     // Display multiple markers on a map
