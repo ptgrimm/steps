@@ -17,8 +17,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/scripts.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 <script type="text/javascript">
 $( document ).ready(function() {
@@ -329,8 +327,8 @@ $( document ).ready(function() {
 			<div class="row">
 			    <div class="col-sm-3 col-md-3">
 					<ul class="steps-links">
-						<li><a href="nursing.html">DESIGN STEPS</a></li>
-						<li><a href="design.html">NURSING STEPS</a></li>
+						<li><a href="index.html">DESIGN STEPS</a></li>
+						<li><a href="nursing.html">NURSING STEPS</a></li>
 						<li><a href="trucking.html">TRUCKING STEPS</a></li>
 						<li><a href="business.html">BUSINESS STEPS</a></li>
 					</ul>
@@ -438,7 +436,7 @@ function initialize() {
         marker = new google.maps.Marker({
             position: position,
             map: map,
-             icon: iconBase + 'pin-green.svg',
+             icon: iconBase + 'pin-red.svg',
             title: markers[i][0]
         });
         
