@@ -1,30 +1,32 @@
 
 /* Career type  */
-html.design {
+html.design-bg {
 	background: url('../img/glasses.jpg') no-repeat right 90px scroll;
 	background-size: 116%;
 	overflow-x: hidden;
 }
 
-html.trucking {
+html.trucking-bg {
 	background: url('../img/trucking.jpg') no-repeat right 90px scroll;
 	background-size: 116%;
 	overflow-x: hidden;
 }
 
-html.business {
+html.business-bg {
 	background: url('../img/business.jpg') no-repeat right 90px scroll;
 	background-size: 116%;
 	overflow-x: hidden;
 }
 
-html.nursing {
+html.nursing-bg {
 	background: url('../img/nursing.jpg') no-repeat right 90px scroll;
 	background-size: 116%;
 	overflow-x: hidden;
 }
 
 body{ background-color:transparent!important; }
+
+* { font-family: 'avenir' }
 
 select { -moz-appearance: window; }
 
@@ -79,7 +81,8 @@ header {
 #learning-header .nav-pills>li+li { margin: 0px; }
 
 
-/*  *  *   Page-wide colors   *  *  */
+
+/*                                  Page-wide colors                       */
 
 /*  		Business		  */
 html.business nav li.hidden-xs a:hover, html.business #learning-header .nav-pills>li.active>a, .nav-pills>li.active>a:focus li:active, 
@@ -115,13 +118,12 @@ html.design .sticky a.selected, html.design .sticky a:hover  { border-color: #3e
 html.nursing nav li.hidden-xs a:hover, html.nursing #learning-header .nav-pills>li.active>a, .nav-pills>li.active>a:focus li:active, 
 html.nursing #learning-header .nav-pills>li>a:hover, html.nursing .color, html.nursing .subjects.nav-pills > li > a:hover, 
 .subjects.nav-pills > li > a:focus, .subjects.nav-pills a:hover .caret, html.nursing #footer { 
-	background:#28ADEA;
+	background:#3BAEE2;
 }
 
-html.nursing .sticky a.selected, html.nursing .sticky a:hover  { border-color: #28ADEA; }
+html.nursing .sticky a.selected, html.nursing .sticky a:hover  { border-color: #3BAEE2; }
 
-
-/* * * * *  end of page-wide  * * * */
+/*                               end page-wide colors                            */
 
 
 
@@ -452,6 +454,7 @@ div.title:first-child { margin-top: 0; }
 li.hidden-xs.gap { margin-left: 160px }
 
 
+
 /** Google maps **/ 
 
 #map{
@@ -483,6 +486,98 @@ li.hidden-xs.gap { margin-left: 160px }
 .info_content h3 { font-size:20px; font-family: 'Avenir'; margin: 9px 0 14px; }
 
 
+
+/* List of results */
+
+.results-list img { max-width: 95px; }
+
+.results-list {
+	position: absolute;
+	z-index: 99;
+	width: 440px;
+	left: 49px;
+	top: 109px;
+}
+.results-list .row {
+	border-top:1px solid #cecece;
+	background-color: white;
+	padding: 10px 0 0px 8px
+}
+.results-list .row:first-child { border: none; }
+.place {
+	font-size: 17px;
+	font-weight: 600;
+	letter-spacing: -.65px;
+	color: #496074;
+	line-height: 17px;
+	margin-bottom: 3px;
+}
+
+.location { font-size: 13px; }
+
+.btn.info {
+	background: #70C22F;
+	color: white;
+	width: 135px;
+	font-size: 13px;
+	height: 30px;
+	margin-top: 13px;
+}
+.btn.info:hover {
+	background: #61A52B;
+	color: white;
+}
+
+.results-list .col-xs-8{ margin-top: 9px }
+
+.results-list .col-xs-4{ height: 115px }
+
+.results-list img {
+	max-width: 100px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.nav-tabs { 
+	margin:0 -15px;
+	background-color: #e5e5e5 
+}
+
+.results-list .nav-tabs>li { margin-bottom: -3px; }
+
+.nav-tabs>li:hover{ background: white }
+
+.nav-tabs>li>a:hover {
+	border-color: white;
+	border-bottom: 2px solid white;
+}
+
+.results-list .nav-tabs>li.active:hover { background: white }
+
+.nav-tabs a, .nav-tabs a:hover, .nav-tabs a:focus { color: #555; }
+
+.nav-tabs a:active { color:#222 }
+
+.results-list .nav-tabs>li.active {
+	background-color: white;
+	border-bottom: 2px solid white;
+}
+
+.results-list .nav-tabs>li.active>a, .results-list .nav-tabs>li.active>a:hover, .results-list .nav-tabs>li.active>a:focus { 
+	border: none;
+	border-bottom:2px solid white;
+}
+
+
+.results-list .nav-tabs>li>a, .results-list .nav-tabs>li>a:hover, .results-list .nav-tabs>li>a:focus { border: none !important }
+
+.results-list .nav-tabs>li>a {
+	border-radius: 0; 
+}
 /************************************    Media Queries   **************************************/
 
 
@@ -597,10 +692,13 @@ li.hidden-xs.gap { margin-left: 160px }
 	}
 	.chevron {
 		width:100%;
-		border-bottom: 2px solid #333;
-		margin:0;
+		border-top: 2px solid #333;
+		margin-bottom:-5px;
 		height: 130px;
 		padding: 5px 12px 12px 3px
+	}
+	.chevron:hover{ 
+		background: #666
 	}
 	.chevron:before, .chevron:after {
 	  -webkit-transform: none;
@@ -633,6 +731,7 @@ li.hidden-xs.gap { margin-left: 160px }
 		text-align: center;
 		padding-left: 0px;
 		padding-top: 18px;
+		font-family: 'Avenir'
 	}
 	.step-title {
 		font-size: 12px;

@@ -10,7 +10,7 @@ function initialize() {
     var bounds = new google.maps.LatLngBounds();
     var mapOptions = {
         mapTypeId: 'roadmap',
-        scrollwheel: false,
+        scrollwheel: false
     };
 
      // Display a map on the page

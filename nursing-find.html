@@ -139,7 +139,6 @@ $(window).scroll(function () {
 	            </ul>
 	        </li>
 		</ul>
-     
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      	<ul class="nav navbar-nav navbar-right" id="sign-in-up-nav">
 	      		<li class="hidden-xs gap"><a href="#">1-800-234-5555</a></li>
@@ -152,9 +151,140 @@ $(window).scroll(function () {
   </div><!-- /.container-fluid -->
 </nav>
 
+<!-- full width map -->
 	<div id="map_wrapper" style="height:100%">
+        <div class="row results-list"> <!-- results listings -->
+
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs" role="tablist">
+                  <li class="active"><a href="#home" role="tab" data-toggle="tab">Schools</a></li>
+                  <li class=""><a href="#panel2" role="tab" data-toggle="tab">Clinics</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                  <div class="tab-pane fade active in" id="home">
+                  
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">Otis College of Art & Design</div>
+                            <div class="location">123 Oak St. Westchester, CA 90292</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/Pepperdine-Pasadena-E26C9C74.jpg" id="picture3" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">North-West College</div>
+                            <div class="location">221 North Brand Blvd.</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/North-West-College-Glendale-70127B0B.jpg" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">Keller Graduate School of Management</div>
+                            <div class="location">2215 W. Mission Road Alhambra</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/Keller-Graduate-School-of-Management-Alhambra-E03D5BDC.jpg" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">West Coast University</div>
+                            <div class="location">2215 W. Mission Road Alhambra</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/West-Coast-University-Los-Angeles-9DB5212F.jpg" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">UEI College</div>
+                            <div class="location">661 W. Redondo Beach Blvd.</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/UEI-College-Gardena-99919AE7.jpg" class="img-responsive" />
+                        </div>
+                    </div>
+                   <!-- <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">California State University, Channel Islands</div>
+                            <div class="location">One University Drive, Camarillo</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/California-State-University-Channel-Islands-0D6BE67C.jpg" class="img-responsive" />
+                        </div>
+                    </div> -->
+                  </div>
+
+                  <div class="tab-pane fade" id="panel2">
+                     <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">Newbridge College</div>
+                            <div class="location">3799 E Burnett St., Long Beach</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/Newbridge-College-Long-Beach-2A294A7C.jpg" id="picture3" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">ITT Technical Institute</div>
+                            <div class="location">6101 W. Centinela Ave, Culver City</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/ITT-Technical-Institute-Culver-City-2FD9C212.jpg" class="img-responsive" />
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">West Coast University</div>
+                            <div class="location">2215 W. Mission Road Alhambra</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/West-Coast-University-Los-Angeles-9DB5212F.jpg" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">Keller Graduate School of Management</div>
+                            <div class="location">2215 W. Mission Road Alhambra</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/Keller-Graduate-School-of-Management-Alhambra-E03D5BDC.jpg" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="place">UEI College</div>
+                            <div class="location">661 W. Redondo Beach Blvd.</div>
+                            <div class="btn info">GET INFO</div>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="http://www.campusexplorer.com/media/125x94/UEI-College-Gardena-99919AE7.jpg" class="img-responsive" />
+                        </div>
+                    </div>
+                  </div>
+                 
+                </div>
+            </div>
+        </div> <!--results listing-->
     	<div id="map_canvas" class="mapping"></div>
 	</div>
+
+
 
 
 	<footer id="footer">
@@ -238,6 +368,11 @@ function initialize() {
     var mapOptions = {
         mapTypeId: 'roadmap',
         scrollwheel: false,
+        zoomControl: true,
+                zoomControlOptions: {
+                    style: google.maps.ZoomControlStyle.SMALL,
+                    position: google.maps.ControlPosition.RIGHT_TOP
+                }
     };
 
     //Add touch events for mobile use..
