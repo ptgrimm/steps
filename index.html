@@ -18,7 +18,7 @@
 <script type="text/javascript" src="{{ STATIC_URL }}js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="assets/js/parallax.js"></script>
+<script src="assets/js/jquery.imageScroll.min.js"></script>
 
 
 <script type="text/javascript">
@@ -66,7 +66,25 @@ $( document ).ready(function() {
 	  }
 	});
 
+//Parallax
+	$('.demo').imageScroll({
+		image: null, // The image to show.
+		imageAttribute: 'image', // The data attribute name for images. Uses the value of this attribute to load the image.
+		holderClass: 'imageHolder', // Class added to image holder(s). 
+		container: $('body'), // The element to which the parallax image(s) will be attached to.
+		speed: 0.2, // The speed of the parallax effect. 
+		coverRatio: 0.75, // How many percent of the screen each image should cover. 
+		holderMinHeight: 200, // The minimum height of the image in pixels.
+		extraHeight: 0, // Extra height added to the image. 
+		mediaWidth: 1415, // The original width of the image.
+		mediaHeight: 2122, // The original height of the image.
+		parallax: true, // Whether or not you want the parallax effect.
+		touch: false // Presents a mobile/tablet friendly version, no parallax effect and smaller images (should be used with a mobile/tablet optimized image)
+	});
+
+
 });
+
 </script>
   
     <!--[if lte IE 8]>
@@ -286,12 +304,11 @@ $( document ).ready(function() {
     	<div id="map_canvas" class="mapping"></div>
 	</div>
 
+
 	<div class="content-with-bg spacer" id="learn-anchor">
 	    <div class="container">
 	        <div class="row" >
 	        	<div class="col-md-8">
-	        		
-				
 		        		<div class="title">Overview</div>
 		        		<p>Graphic Designers work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
 	        			<div class="title">What it's like to be a Graphic Designer</div>
@@ -509,6 +526,8 @@ function initialize() {
 }
 
 </script>
+
+
 
 </body>
 </html>

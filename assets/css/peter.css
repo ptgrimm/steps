@@ -674,6 +674,9 @@ li.hidden-xs.gap { margin-left: 160px }
 
 /*  CSS3 Parallax */
 
+.imageHolder{
+	height: 500px!important
+}
 .para {
   display: -webkit-box;
   display: -webkit-flex;
@@ -694,7 +697,8 @@ li.hidden-xs.gap { margin-left: 160px }
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  height: 100%;
+  /*height: 100%;*/
+  height: 490px!important;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
@@ -703,7 +707,7 @@ li.hidden-xs.gap { margin-left: 160px }
 }
 .para section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -717,14 +721,14 @@ li.hidden-xs.gap { margin-left: 160px }
   overflow: hidden;
   background-color: #000;
 }
-.para section:nth-child(1) .image {
-  background-image: url(1.jpg);
+.para section.baby .image {
+  background-image: url(../img/baby.jpg);
 }
 .para section:nth-child(2) .image {
-  background-image: url(2.jpg);
+  background-image: url(../img/wheel.jpg);
 }
 .para section:nth-child(3) .image {
-  background-image: url(3.jpg);
+  background-image: url(../img/baby.jpg);
 }
 .para section:nth-child(4) .image {
   background-image: url(4.jpg);
@@ -735,55 +739,90 @@ li.hidden-xs.gap { margin-left: 160px }
 .para section:nth-child(6) .image {
   background-image: url(6.jpg);
 }
+
 .para section .image {
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 500;
-  opacity: 0.4;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 500;
+	opacity: 0.4;
 }
+
 .para section .stuff {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  height: 100%;
-  width: 100%;
-  max-width: 70%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-  z-index: 1000;
-  color: #e67e22;
-  margin: 0 auto;
-  font-size: 26px;
-  position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	height: 100%;
+	width: 100%;
+	max-width: 70%;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+	z-index: 1000;
+	color: #e67e22;
+	margin: 0 auto;
+	font-size: 26px;
+	position: relative;
 }
+
 .para section .stuff:before, .para section .stuff:after {
-  width: 100%;
-  height: 1px;
-  display: block;
-  background-color: #d35400;
-  content: "";
-  margin: 30px 0;
+	width: 100%;
+	height: 1px;
+	display: block;
+	background-color: #d35400;
+	content: "";
+	margin: 30px 0;
+}
+
+.feature p {
+	max-width: 800px;
+	margin: 0 auto;
+	line-height: 30px;
+	font-size: 18px;
+}
+
+.feature .title{
+	font-size: 60px;
+	text-align:center;
+}
+
+.btn.learn-btn {
+	margin: 25px auto 12px;
+	background: #52AEE2;
+	color: white;
+	font-weight: 600;
+	padding: 10px 26px;
+	width: 185px;
+	font-size: 18px;
+	display: block
+}
+
+.btn.learn-btn:hover {
+	color: white;
+	background-color: #48A0D3
+}
+
+.feature-container{	
+	padding: 45px 0;
 }
 
 
+/*  Video Area  */
 
-/* Video Area */
 .video-area {
 	position: relative;
 	height: 595px;
@@ -815,7 +854,7 @@ li.hidden-xs.gap { margin-left: 160px }
 	color: white;
 }
 .btn.find-btn:hover {
-	background: #387FA7;
+	background: #48A0D3;
 	color: white;
 }
 .img-responsive{

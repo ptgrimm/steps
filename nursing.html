@@ -17,6 +17,8 @@
 <script type="text/javascript" src="{{ STATIC_URL }}js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="assets/js/jquery.imageScroll.min.js"></script>
+
 
 
 <!-- in head <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
@@ -78,24 +80,20 @@ $( document ).ready(function() {
 	});
 
 // Paralax
-   $window = $(window);
- 
-   $('section[data-type="background"]').each(function(){
-     // declare the variable to affect the defined data-type
-     var $scroll = $(this);
-                     
-      $(window).scroll(function() {
-        // HTML5 proves useful for helping with creating JS functions!
-        // also, negative value because we're scrolling upwards                             
-        var yPos = -($window.scrollTop() / $scroll.data('speed')); 
-         
-        // background position
-        var coords = '50% '+ yPos + 'px';
- 
-        // move the background
-        $scroll.css({ backgroundPosition: coords });    
-      }); // end window scroll
-    });  // end section function
+	$('.para').imageScroll({
+		image: null, // The image to show.
+		imageAttribute: 'image', // The data attribute name for images. Uses the value of this attribute to load the image.
+		holderClass: 'imageHolder', // Class added to image holder(s). 
+		container: $('body'), // The element to which the parallax image(s) will be attached to.
+		speed: 0.2, // The speed of the parallax effect. 
+		coverRatio: 0.75, // How many percent of the screen each image should cover. 
+		holderMinHeight: 200, // The minimum height of the image in pixels.
+		extraHeight: 0, // Extra height added to the image. 
+		mediaWidth: 1415, // The original width of the image.
+		mediaHeight: 512, // The original height of the image.
+		parallax: true, // Whether or not you want the parallax effect.
+		touch: false // Presents a mobile/tablet friendly version, no parallax effect and smaller images (should be used with a mobile/tablet optimized image)
+	});
 
 });
 
@@ -159,10 +157,10 @@ $( document ).ready(function() {
     <!-- Collect the nav links, forms, and other content for toggling -->
         <ul class="subjects nav nav-pills pull-left">
 	        <li class="dropdown">
-	            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Nursing <b class="caret"></b></a>
+	            <a href="#" data-toggle="dropdown" class="dropdown-toggle">CNA Programs <b class="caret"></b></a>
 	            <ul class="dropdown-menu">
-	                <li><a href="#">Physician's Assistant</a></li>
-	                <li><a href="#">Medical Doctor</a></li>
+	                <li><a href="#">RN Programs</a></li>
+	                <li><a href="#">PA Programs</a></li>
 	            </ul>
 	        </li>    
 	        <li class="span hidden-xs">In:</li>
@@ -487,36 +485,47 @@ $( document ).ready(function() {
 	</div>
 
 
-<!-- first body content 
-<div class="content-with-bg spacer" id="learn-anchor">
+<!-- Paralax -->
+<div class="para" data-image="assets/img/baby.jpg" data-width="2122" data-height="1415"></div>
+
+<!-- first body content  -->
+<div class="feature-container spacer" id="learn-anchor">
 	    <div class="container">
 	        <div class="row" >
-	        	<div class="col-md-8">
-		        		<div class="title">Overview</div>
-		        		<p>Nurses work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
-	        			<div class="title">What it's like to be a Nurse</div>
-	        			<p>Nurses have a median annual wage of $63,750. The highest 10 percent earn more than $93,700, while the lowest 10 percent earn less than $43,970. The middle 50 percent earn between $52,520 and $77,970. The median annual wages of top employing ind. The median annual wages of top employing ind. Read more </p>
+	        	<div class="col-md-12 feature">
+		        		<div class="title">CNA Overview</div>
+		        		<p>Nurses work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic tests... </p>
+	        			<div class="btn learn-btn">Learn more</div>
 	        	</div>
 	        </div>
 	    </div>
-</div>-->
-
+</div>
 
 <!-- Paralax -->
-<section id="second" data-speed="4" data-type="background">
-    <div class="container"></div>
-</section>
+<div class="para" data-image="assets/img/wheel.jpg" data-width="2122" data-height="1415"></div>
 
+<!-- 2nd body content  -->
+<div class="feature-container spacer" id="learn-anchor">
+	    <div class="container">
+	        <div class="row" >
+	        	<div class="col-md-12 feature">
+		        		<div class="title">What it's like to be a CNA</div>
+		        		<p>Nurses have a median annual wage of $63,750. The highest 10 percent earn more than $93,700, while the lowest 10 percent earn less than $43,970. The middle 50 percent earn between $52,520 and $77,970. The median annual wages of top employing ind. The median annual wages of top employing... </p>
+		        		<br>
+	        			<img class="img-responsive" src="assets/img/salary.png"/>
+	        			<div class="btn learn-btn">Learn more</div>
+	        	</div>
+	        </div>
+	    </div>
+</div>
+
+<!-- Paralax -->
+<div class="para" data-image="assets/img/pa-class.jpg" data-width="1121" data-height="841"></div>
 
 	<div class="content-with-bg spacer" id="learn-anchor">
 	    <div class="container">
 	        <div class="row" >
 	        	<div class="col-md-8">
-		        		<div class="title">CNA Career Overview in Los Angeles & Vicinity</div>
-		        		<p>Nurses work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
-	        			<div class="title">What it's like to be a CNA</div>
-	        			<p>Nurses have a median annual wage of $63,750. The highest 10 percent earn more than $93,700, while the lowest 10 percent earn less than $43,970. The middle 50 percent earn between $52,520 and $77,970. The median annual wages of top employing ind. The median annual wages of top employing ind. Read more </p>
-	        		<img class="img-responsive" src="assets/img/salary.png"/>
 	        			<div class="title">Earnings and Salary for Certified Nursing Assistants in Los Angeles & Vicinity</div>
 	        			<p>Registered nurses (RNs) work to treat and educate patients and the public about various medical conditions, as well as provide advice and emotional support to patients’ family members. They help perform diagnostic tests and analyze results, record patients’ medical histories and symptoms, administer treatment and medications, operate medical machinery and help out with patient follow-up and rehabilitation. They help perform diagnostic test cool Read more</p>
 	        		<img class="img-responsive" src="assets/img/jobs.png"/>
@@ -629,7 +638,7 @@ $( document ).ready(function() {
 		<br>
 
          <div class="row">
-            <h3>Registered Nurse Programs by State</h3>
+            <h3>Certified Nursings Programs by State</h3>
             <div class="col-sm-3">
                 <ul>
                     <li>Alabama</li>
