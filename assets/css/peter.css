@@ -88,6 +88,8 @@ header.normal .sticky a {
 
 #learning-header { font-family: 'avenir'; font-size:10px; text-transform: uppercase; font-weight:600; background: #333; }
 
+#learning-header li:hover { background: #333; }
+
 #learning-header a { color:white; }
 
 #learning-header .nav-pills>li>a { border-radius: 0px; padding:7px 16px 5px }
@@ -972,7 +974,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
-
+/*
 @media screen and (min-width: 990px) and (max-width: 1520px) {
 
 	.content-with-bg{
@@ -984,7 +986,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 @media screen and (min-width: 1520px) and (max-width:2180px) {
 
-	.content-with-bg{
+/*	.content-with-bg{
 		background:url('../img/gray.png') no-repeat 1300px 45px scroll #FFF;
 	}
 
@@ -998,7 +1000,7 @@ li.hidden-xs.gap { margin-left: 160px }
 	}
 
 }
-
+*/
 
 @media screen and (min-width:2800px) {
 
