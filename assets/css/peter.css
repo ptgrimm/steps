@@ -256,7 +256,7 @@ html.nursing #footer { background: #333; }
 	text-shadow: 1px 1px 1px #333;
 	text-align: left;
 	letter-spacing:.8px; 
-	max-width: 74%;
+	max-width: 750px;
 }
 
 .container .headline {
@@ -1114,7 +1114,13 @@ li.hidden-xs.gap { margin-left: 160px }
 	
 	.container .headline {
 		font-weight: 600;
-		font-size: 56px
+		font-size: 48px;
+		line-height: 65px;
+	}
+
+	.headline{
+		margin-top:25px;
+		margin-bottom: 25px 
 	}
 
 }
