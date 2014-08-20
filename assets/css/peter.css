@@ -32,7 +32,10 @@ select { -moz-appearance: window; }
 
 a:hover { text-decoration: none!important}
 
-
+button.btn.btn-action {
+	pointer-events: none!important;
+	cursor: pointer;
+}
 /* Sticky header */
 
 header {

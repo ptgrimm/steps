@@ -4,7 +4,6 @@
 <head>
 <meta charset="utf-8" />
 <title>Campus Steps</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <link href='//www.campusexplorer.com/css/combine/css/fonts/avenirnext/avenirnext.css,/css/fonts/museoslab1000/museoslab1000.css' rel='stylesheet' type='text/css'>
 <!-- <link rel="stylesheet" type="text/css" href="assets/css/clearsteps.css" /> -->
 <link rel="stylesheet" type="text/css" href="assets/css/peter.css" />
@@ -18,6 +17,19 @@
 <script type="text/javascript" src="{{ STATIC_URL }}js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!-- in head <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+<meta id="viewport" name='viewport'>
+<script>
+    (function(doc) {
+        var viewport = document.getElementById('viewport');
+        if ( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+            viewport.setAttribute("content", "initial-scale=0.3");
+        } else if ( navigator.userAgent.match(/iPad/i) ) {
+            viewport.setAttribute("content", "initial-scale=.9");
+        }
+    }(document));
+</script>
 
 <script type="text/javascript"> 
 $( document ).ready(function() {
