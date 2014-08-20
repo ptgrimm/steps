@@ -630,7 +630,10 @@ li.hidden-xs.gap { margin-left: 160px }
 	padding-bottom: 15px;
 	padding-left:16px;
 }
-
+.directory li:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
 
 /*  Paralax */
 
@@ -703,6 +706,7 @@ li.hidden-xs.gap { margin-left: 160px }
 .img-responsive{
 	margin: 0 auto!important;	
 }
+
 
 
 
