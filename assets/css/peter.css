@@ -139,8 +139,8 @@ html.nursing #learning-header .nav-pills>li>a:hover, html.nursing .color, html.n
 
 html.nursing .sticky a.selected, html.nursing .sticky a:hover  { border-color: #70C5F5; }
 html.nursing .sticky a:hover  { background-color: #70C5F5; }
-html.nursing .directory { background-color: #2D5188}  /* #5989D1 */ 
-html.nursing #footer { background: #1D2F47; }
+html.nursing .directory { background-color: #466BA3}  /* #5989D1 */ 
+html.nursing #footer { background: #333; }
 
 /*                               end page-wide colors                            */
 
@@ -619,9 +619,9 @@ li.hidden-xs.gap { margin-left: 160px }
 .directory { padding: 20px 0; color:#FFF; }
 
 .directory li {
-	line-height: 26px;
+	line-height: 23px;
 	letter-spacing: .8px;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 .directory h3 {
@@ -635,7 +635,7 @@ li.hidden-xs.gap { margin-left: 160px }
 /*  Paralax */
 
 #first { 
-    background: url(http://mode87.com/untame/demo/parallax/images/intro.png) 50% 0 fixed; 
+    background: url(../img/wheel.jpg) 50% 0 fixed; 
     height: auto;  
     margin: 0 auto; 
     width: 100%; 
@@ -645,7 +645,7 @@ li.hidden-xs.gap { margin-left: 160px }
 }
 
 #second { 
-    background: url(../img/baby5.jpg) 50% 0 fixed; 
+    background: url(../img/baby.jpg) 50% 0 fixed; 
     height: auto;  
     margin: 0 auto; 
     width: 100%; 
@@ -655,14 +655,13 @@ li.hidden-xs.gap { margin-left: 160px }
 }
 
 #third { 
-    background: url(http://mode87.com/untame/demo/parallax/images/about.png) 50% 0 fixed; 
-    height: auto;
+    background: url(../img/wheel.jpg) 50% 0 fixed; 
+    height: auto;  
     margin: 0 auto; 
     width: 100%; 
     position: relative; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
-    padding: 100px 0;
-    color: #fff;
+    box-shadow:inset -4px 1px 56px -10px;
+    padding: 200px 0;
 }
 
 
@@ -672,7 +671,7 @@ li.hidden-xs.gap { margin-left: 160px }
 	height: 595px;
 	background: url(http://mode87.com/untame/demo/parallax/images/about.png) repeat;
 	text-align: center;
-	padding:64px;
+	padding:64px 0;
 }
 .video-holder {
 	max-width: 800px;
@@ -701,6 +700,10 @@ li.hidden-xs.gap { margin-left: 160px }
 	background: #387FA7;
 	color: white;
 }
+.img-responsive{
+	margin: 0 auto!important;	
+}
+
 
 
 /************************************    Media Queries   **************************************/
@@ -810,7 +813,7 @@ li.hidden-xs.gap { margin-left: 160px }
 		padding: 10px 0;
 	}
 	.gray-bg {
- 		 background: #f5f5f5; 
+ 		/* background: #f5f5f5; */
 	}
 	#div_id_user_type {
 		margin-right: 0px;
@@ -877,7 +880,13 @@ li.hidden-xs.gap { margin-left: 160px }
 		line-height: 34px;
 		font-weight: 600
 	}
-	.results-list { position: relative; width:100%; left:0; top:0; padding-left: 17px; }
+	.results-list, .results-list.short { 
+		position: relative; 
+		width:100%; 
+		margin-left:0; 
+		margin-top:0; 
+		padding-left: 0px; 
+	}
 	.nav-tabs {
 		border-bottom: 1px solid #ddd;
 		margin-left: -6px;
