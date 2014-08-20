@@ -250,6 +250,7 @@ html.nursing #footer { background: #333; }
 	margin-left:20px;
 	font-family: 'avenir';
 	font-size: 38px;
+	font-weight: 600;
 	color: white;
 	font-weight: lighter;
 	text-shadow: 1px 1px 1px #333;
@@ -257,6 +258,11 @@ html.nursing #footer { background: #333; }
 	letter-spacing:.8px; 
 	max-width: 74%;
 }
+
+.container .headline {
+	font-weight: 600;
+}
+
 .school-finder h3 { font-family: 'avenir'; text-align: center}
 
 .school-finder .form-inline .form-group { text-align: left; margin-bottom: 15px; }
@@ -817,7 +823,7 @@ li.hidden-xs.gap { margin-left: 160px }
 }
 
 .feature-container{	
-	padding: 45px 0;
+	padding: 43px 0 30px;
 }
 
 
@@ -1069,7 +1075,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 @media screen and (min-width: 768px) and (max-width:1130px) {
 
-	 html.trucking, html.nursing, html.design, html.business  {
+	html.trucking, html.nursing, html.design, html.business  {
 		background-position: right 85px;
 		background-size: 130%;
 	}
@@ -1104,6 +1110,14 @@ li.hidden-xs.gap { margin-left: 160px }
 
 }
 
+@media screen and (min-width: 1130px) {
+	
+	.container .headline {
+		font-weight: 600;
+		font-size: 56px
+	}
+
+}
 
 @media screen and (max-width:768px) { 
 
