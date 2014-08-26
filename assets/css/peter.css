@@ -478,7 +478,7 @@ html.nursing #footer { background: #333; }
 }
 
 
-div.title:first-child { margin-top: 0; }
+h1.title:first-child { margin: 0; }
 
 li.hidden-xs.gap { margin-left: 160px }
 
@@ -803,7 +803,7 @@ li.hidden-xs.gap { margin-left: 160px }
 
 .feature .title{
 	font-size: 60px;
-	text-align:center;
+	text-align: center;
 }
 
 .btn.learn-btn {
@@ -1070,6 +1070,12 @@ li.hidden-xs.gap { margin-left: 160px }
 	  	max-height: 785px;
 	  }
 
+}
+
+  
+@media screen and (max-width: 1028px) {
+
+	.para, .imageHolder { display: none }
 }
 
 
